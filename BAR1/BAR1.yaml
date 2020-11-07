@@ -1,5 +1,5 @@
 name: BAR1
-description: Updated to give the accurate widths for spar caps, and leading and trailing edge reinforcement, Evan Anderson 7/27/2020. + Adujstments to successfully load the file in SONATA Pietro Bortolotti 07/31/2020
+description: Flexible downwind design - rail transportable - Spar caps with industry baseline GFRP - last updated on July 31st 2020 by Pietro Bortolotti
 components:
     blade:
         outer_shape_bem:

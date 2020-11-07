@@ -6,9 +6,10 @@ A publication describing the models is under submission at the Journal of Wind E
 ## Nomenclature
 * BAR0 - Upwind non-transportable baseline with GFRP spar caps
 * BAR1 - Downwind flexible rail-transportable with GFRP spar caps
-* BAR2 - Downwind flexible rail-transportable with CFRP spar caps
-* BAR3 - Upwind segmented blades with CFRP spar caps- BAR3
-* BAR4 - Upwind flexible rail-transportable with CFRP spar caps cone 3 deg uptilt 5 deg
+* BAR2 - Downwind flexible rail-transportable with industry-baseline CFRP spar caps
+* BAR3 - Upwind segmented blades with CFRP spar caps
+* BAR4 - Upwind flexible rail-transportable with industry-baseline CFRP spar caps cone 3 deg uptilt 5 deg
+* BAR5 - Downwind flexible rail-transportable with heavy-tow CFRP spar caps
 
 ## Controller
 The controller for the BAR models is ROSCO. Please follow the instructions here 

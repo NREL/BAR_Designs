@@ -1,5 +1,5 @@
 name: BAR0
-description: BAR baseline 0 as of 082020
+description: Stiff upwind design - not transportable - Spar caps with industry baseline GFRP - last updated on August 20th 2020 by Pietro Bortolotti
 components:
     blade:
         outer_shape_bem:
