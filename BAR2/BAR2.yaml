@@ -1,5 +1,14 @@
 name: BAR2
 description: Flexible downwind design - rail transportable - Spar caps with industry baseline CFRP - last updated on lon July 15th 2020 by Pietro Bortolotti
+assembly:
+    turbine_class: III
+    turbulence_class: A
+    drivetrain: Constant_eff
+    rotor_orientation: Upwind
+    number_of_blades: 3
+    rotor_diameter: 206.
+    hub_height: 140.
+    rated_power: 5000000.
 components:
     blade:
         outer_shape_bem:
@@ -378,31 +387,97 @@ components:
                        -  [13.6005459989504, 0.0, 0.0, 0.0, 0.0, -1.2293281214521516, 13.6005459989504, 0.0, 0.0, 0.0, -0.027953162739692654, 13.6005459989504, 1.2293281214521516, 0.027953162739692654, 0.0, 0.5346468895095688, 0.5346468895095688, 0.0, 0.0, 0.0, 0.5625861021881251]
                        -  [8.755341793297118, 0.0, 0.0, 0.0, 0.0, -0.5278575683754175, 8.755341793297118, 0.0, 0.0, 0.0, -0.007738615536534447, 8.755341793297118, 0.5278575683754175, 0.007738615536534447, 0.0, 0.16734511770543214, 0.16734511770543214, 0.0, 0.0, 0.0, 0.1757047005771446]
     hub:
-        outer_shape_bem: {diameter: 6.0, cone_angle: 0.05235987755982988, drag_coefficient: 0.5}
-        elastic_properties_mb:
-            system_mass: 77694.2262786143
-            system_inertia: [581067.552644647, 581067.552644647, 581067.552644647, 0.0, 0.0, 0.0]
-            system_center_mass: [-7.23713396319902, 0.0, 1.7691026438992148]
+        cone_angle: 0.05235987755982988
+        diameter: 6.0
+        drag_coefficient: 0.5
+        hub_material: steel #cast_iron
+        spinner_material: glass_biax
+        flange_t2shell_t: 4.0
+        flange_OD2hub_D: 0.5
+        flange_ID2OD: 0.8
+        hub_blade_spacing_margin: 1.2
+        hub_stress_concentration: 2.5
+        n_front_brackets: 3
+        n_rear_brackets: 3
+        clearance_hub_spinner: 0.75 #0.5
+        spin_hole_incr: 1.2
+        pitch_system_scaling_factor: 0.54
+        spinner_gust_ws: 70.0
     nacelle:
-        outer_shape_bem: {uptilt_angle: 0.08726646259971647, distance_tt_hub: 3.0, overhang: 7.0}
-        elastic_properties_mb:
-            above_yaw_mass: 352801.00295270584
-            yaw_mass: 16974.078585601852
-            inertia: [359805.14102337573, 3435207.0838298304, 3075401.9428064534, 0.0, 288490.4237826817, 0.0]
-            center_mass: [1.457328485476004, 0.0, 0.18702458272072692]
         drivetrain:
-            gear_ratio: 96.76
-            shaft_ratio: 0.1
-            planet_numbers: [3.0, 3.0, 1.0]
-            shrink_disc_mass: 1600.0
-            carrier_mass: 8000.0
-            flange_length: 0.5
-            gearbox_input_xcm: 0.1
-            hss_input_length: 1.5
+            diameter: 3.0
+            uptilt_angle: 0.08726646259971647
+            distance_tt_hub: 3.0
             distance_hub2mb: 1.912
-            yaw_motors_number: 6.0
+            distance_mb2mb: 0.368
+            overhang: 7.
+            lss_diameter: [0.577, 0.577]
+            lss_wall_thickness: [0.288, 0.288]
+            generator_length: 2.0
+            hss_length: 1.5
+            hss_diameter: [0.288, 0.288]
+            hss_wall_thickness: [0.144, 0.144]
+            bedplate_flange_width: 1.0
+            bedplate_flange_thickness: 0.05
+            bedplate_web_thickness: 0.05
+            gear_ratio: 96.76
+            planet_numbers: [3, 3, 1]
+            gear_configuration: eep
             gearbox_efficiency: 0.95
-            generator_efficiency: 0.98
+            mb1Type: CARB
+            mb2Type: SRB
+            uptower: True
+            lss_material: steel
+            hss_material: steel
+            bedplate_material: steel
+        generator:
+            generator_type: DFIG
+            rho_Fe: 7700.0
+            rho_Fes: 7850.0
+            rho_Copper: 8900.0
+            rho_PM: 7450.0
+            B_r: 1.2
+            P_Fe0e: 1.0
+            P_Fe0h: 4.0
+            S_N: -0.002
+            alpha_p: 1.0995574287564276 #0.5*np.pi*0.7
+            b_r_tau_r: 0.45
+            b_ro: 0.004
+            b_s_tau_s: 0.45
+            b_so: 0.004
+            freq: 60
+            h_i: 0.001
+            h_sy0: 0.0
+            h_w: 0.005
+            k_fes: 0.9
+            k_s: 0.2
+            m: 3
+            mu_0: 1.2566370614359173e-06 #np.pi*4e-7
+            mu_r: 1.06
+            p: 3.0
+            phi: 1.5707963267948966 # 90 deg
+            ratio_mw2pp: 0.7
+            resist_Cu: 2.52e-8 #1.8e-8*1.4
+            y_tau_pr: 0.8333333 #10. / 12
+            rated_rpm: 1200.0
+            cofi: 0.9
+            y_tau_p: 0.8 #12./15.
+            sigma: 21.5e3
+            rad_ag: 0.61
+            len_s: 0.49
+            h_s: 0.08
+            I_0: 40.0
+            B_symax: 1.3
+            S_Nmax: -0.2
+            h_0: 0.01
+            k_fillr: 0.55
+            k_fills: 0.65
+            q1: 5
+            q2: 4
+            C_Cu: 4.786
+            C_Fe: 0.556
+            C_Fes: 0.50139
+            C_PM: 50.0
     tower:
         outer_shape_bem:
             reference_axis:
@@ -573,19 +648,51 @@ airfoils:
                 grid: [-3.141592653589793, -2.967, -2.793, -2.618, -2.443, -2.269, -2.094, -1.92, -1.745, -1.571, -1.396, -1.222, -1.047, -0.8727, -0.6981, -0.5236, -0.3491, -0.3447, -0.3403, -0.336, -0.3316, -0.3272, -0.3229, -0.3185, -0.3142, -0.3098, -0.3054, -0.3011, -0.2967, -0.2923, -0.288, -0.2836, -0.2793, -0.2749, -0.2705, -0.2662, -0.2618, -0.2574, -0.2531, -0.2487, -0.2443, -0.24, -0.2356, -0.2313, -0.2269, -0.2225, -0.2182, -0.2138, -0.2094, -0.2051, -0.2007, -0.1963, -0.192, -0.1876, -0.1833, -0.1702, -0.1658, -0.1614, -0.1571, -0.1527, -0.1484, -0.144, -0.1396, -0.1353, -0.1309, -0.1265, -0.1222, -0.1178, -0.1134, -0.1091, -0.1047, -0.1004, -0.09599, -0.09163, -0.08727, -0.0829, -0.07854, -0.07418, -0.06981, -0.06545, -0.06109, -0.05672, -0.05236, -0.048, -0.04363, -0.03927, -0.03491, -0.03054, -0.02618, -0.02182, -0.01745, -0.01309, -0.008727, -0.004363, 0.0, 0.004363, 0.008727, 0.01309, 0.01745, 0.02182, 0.02618, 0.03054, 0.03491, 0.03927, 0.04363, 0.048, 0.05236, 0.05672, 0.06109, 0.06545, 0.06981, 0.07418, 0.07854, 0.0829, 0.08727, 0.09163, 0.09599, 0.1004, 0.1047, 0.1091, 0.1134, 0.1178, 0.1222, 0.1265, 0.1309, 0.1353, 0.1396, 0.144, 0.1484, 0.1527, 0.1571, 0.1614, 0.1658, 0.1702, 0.1745, 0.1789, 0.1833, 0.1876, 0.192, 0.1963, 0.2007, 0.2051, 0.2094, 0.2138, 0.2182, 0.2225, 0.2269, 0.2313, 0.2356, 0.24, 0.2443, 0.2487, 0.2531, 0.2574, 0.2618, 0.2662, 0.2705, 0.2749, 0.2793, 0.2836, 0.288, 0.2923, 0.2967, 0.3011, 0.3054, 0.3098, 0.3142, 0.3185, 0.3229, 0.3272, 0.3316, 0.336, 0.3403, 0.3447, 0.3491, 0.3534, 0.3578, 0.3622, 0.3665, 0.3709, 0.3752, 0.3796, 0.384, 0.3883, 0.3927, 0.3971, 0.4014, 0.4058, 0.4102, 0.4145, 0.4189, 0.4232, 0.432, 0.4363, 0.5236, 0.6981, 0.8727, 1.047, 1.222, 1.396, 1.571, 1.745, 1.92, 2.094, 2.269, 2.443, 2.618, 2.793, 2.967, 3.141592653589793]
                 values: [0.0, 0.39210102, 0.46035849, 0.45154703, 0.43830868, 0.44928454, 0.46994836, 0.48767291, 0.49454304, 0.48532252, 0.44628428, 0.39624088, 0.34057727, 0.28514107, 0.23241364, 0.16853081, -0.00733933, -0.01095206, -0.01453504, -0.01837844, -0.02231338, -0.02700247, -0.03158499, -0.03717873, -0.04264819, -0.0483947, -0.05413626, -0.05891587, -0.06380527, -0.06768763, -0.07148176, -0.07456119, -0.07756692, -0.07989439, -0.08220955, -0.08378633, -0.08539978, -0.08635785, -0.08729407, -0.08805162, -0.08880581, -0.08934783, -0.08990201, -0.09034548, -0.09079926, -0.0912027, -0.0915969, -0.09205029, -0.09250679, -0.09324591, -0.0940031, -0.09506192, -0.09609668, -0.09660262, -0.09709537, -0.09829721, -0.09870072, -0.09920492, -0.09969767, -0.10020187, -0.10069461, -0.10119882, -0.10170272, -0.10214619, -0.10259997, -0.10310417, -0.10359691, -0.10410111, -0.10460638, -0.10519767, -0.10580272, -0.10639401, -0.10700046, -0.10764997, -0.10829947, -0.10905054, -0.10979997, -0.1105494, -0.11130054, -0.11204997, -0.1127994, -0.11355055, -0.11429998, -0.11504941, -0.11580041, -0.11634999, -0.11689957, -0.11745041, -0.11799999, -0.11854957, -0.11910038, -0.1196, -0.12009996, -0.12060004, -0.1211, -0.1215833, -0.12206671, -0.12255, -0.12303297, -0.12351704, -0.12400001, -0.12449963, -0.12500031, -0.12540001, -0.1257997, -0.12620032, -0.12660001, -0.12694974, -0.12730024, -0.12760001, -0.12789978, -0.1281502, -0.1284, -0.1284, -0.1284, -0.1284, -0.1284, -0.12789501, -0.12740226, -0.12644632, -0.1255101, -0.1242029, -0.12289012, -0.12131334, -0.11969986, -0.11773347, -0.11581177, -0.11364491, -0.11147845, -0.10950748, -0.10749253, -0.10591575, -0.1043023, -0.10289025, -0.10151056, -0.10019888, -0.09888842, -0.09765656, -0.09639605, -0.09516419, -0.09390369, -0.09259291, -0.09131177, -0.09005081, -0.08878643, -0.08706182, -0.0852986, -0.08444145, -0.08360379, -0.08284704, -0.08210792, -0.08110216, -0.08009656, -0.07955455, -0.07899995, -0.07864701, -0.07830209, -0.07804939, -0.07780054, -0.07784982, -0.07790024, -0.07794951, -0.07799993, -0.07840281, -0.07879701, -0.0794506, -0.0801084, -0.08099534, -0.08190404, -0.0831359, -0.0843964, -0.08590829, -0.08738652, -0.08924893, -0.09111722, -0.09328529, -0.09550447, -0.09812633, -0.10068859, -0.10376226, -0.10676799, -0.11029269, -0.11382559, -0.11781681, -0.12190096, -0.1264892, -0.13097317, -0.13616292, -0.14136331, -0.14707913, -0.15291058, -0.15507963, -0.1595186, -0.16168764, -0.20301569, -0.26374729, -0.31438378, -0.36207178, -0.40791464, -0.4497846, -0.48532252, -0.49454304, -0.48767291, -0.46994836, -0.44928454, -0.43830868, -0.45154703, -0.46434876, -0.48736193, 0.0]
 materials:
-   -  {name: Gelcoat, orth: 0.0, rho: 1235.0, E: 3.44E9, G: 1.323E9, nu: 0.3, alpha: 0.0, Xt: 4.253E7, Xc: 5.0E7, S: 2.126E7, GIc: 303.0, GIIc: 3446.0, alp0: 53.0, ply_t: 5.0E-4, waste: 0.25, unit_cost: 7.23, component_id: 0.0}
-   -  {name: Adhesive, orth: 0.0, rho: 1100.0, E: 4560000.0, G: 1450000.0, nu: 0.3, alpha: 0.0, Xt: 6.151E7, Xc: 6.536E7, S: 3.661E7, GIc: 0.0, GIIc: 0.0, alp0: 0.0, ply_t: 0.001, waste: 0.25, unit_cost: 7.23}
+   -  name: Gelcoat
+      orth: 0.0
+      rho: 1235.0
+      E: 3.44e+9
+      G: 1.323e+9
+      nu: 0.3
+      alpha: 0.0
+      Xt: 0
+      Xc: 0
+      S: 0
+      GIc: 0
+      GIIc: 0
+      alp0: 53.0
+      ply_t: 5.0E-4
+      waste: 0.25
+      unit_cost: 7.23
+      component_id: 0.0
+   -  name: Adhesive
+      orth: 0.0
+      rho: 1100.0
+      E: 4560000.0
+      G: 1450000.0
+      nu: 0.3
+      alpha: 0.0
+      Xt: 6.151e+7
+      Xc: 6.536e+7
+      S: 3.661e+7
+      GIc: 0.0
+      GIIc: 0.0
+      alp0: 0.0
+      ply_t: 0.001
+      waste: 0.25
+      unit_cost: 7.23
    -  name: glass_uni
       description: Vectorply E-LT-5500, Epikote MGS RIMR 135/Epicure MGS RIMH 1366 epoxy
-      source: MSU composites database 3D property tests, Engineering Mechanics of Composite Materials, Daniel, I & Ishai, O., 1994, pg. 34
+      source: MSU composites database 3D property tests
       orth: 1.0
       rho: 1940.0
-      E: [4.46E10, 1.7E10, 1.67E10]
-      G: [3.27E9, 3.48E9, 3.5E9]
-      nu: [0.262, 0.35, 0.264]
-      Xt: [6.092E8, 3.81E7, 1.529E7]
-      Xc: [4.7471E8, 1.1264E8, 1.1322E8]
-      S: [1.891E7, 1.724E7, 1.316E7]
+      E: [43.70e+9, 16.50e+9,15.45e+9]
+      G: [3.265e+9, 3.495e+9, 3.480e+9]
+      nu: [0.262, 0.264,0.35]
+      Xt: [640.23e+6, 38.1e+6, 0.]
+      Xc: [370.69e+6,82.18e+6,0]
+      S: [30.17e+6, 18.97e+6, 6.21e+6]
+      m: 10
       GIc: 61.0
       GIIc: 101.0
       alp0: 50.0
@@ -596,18 +703,19 @@ materials:
       waste: 0.05
       fiber_density: 2535.5
       area_density_dry: 7.227162215457267
-      component_id: 4.0
+      component_id: 5.0
    -  name: carbon_uni_industry_baseline
       description: Baseline industry CFRP tested by Sandia National Labs within the BAR Project
-      source: https://energy.sandia.gov/download/45350/
+      source: https://energy.sandia.gov/download/45350/, RVE analysis
       orth: 1.0
       rho: 1600.0
-      E: [1.5E11, 9.1E9, 9.1E9]
-      G: [4.0E9, 4.0E9, 3.5E9]
-      nu: [0.318, 0.318, 0.0]
-      Xt: [2.24E9, 0.0, 0.0]
-      Xc: [1.53E9, 0.0, 0.0]
-      S: [6.0E7, 6.0E7, 6.0E7]
+      E: [157.528e+9, 9.1e+9, 9.1e+9]
+      G: [3.94e+9, 3.94e+9, 2.599e+9]
+      nu: [0.313211, 0.313211, 0.469221]
+      Xt: [1285.2e+6, 38.1e+6, 0.0]
+      Xc: [878.21e+6, 82.18e+6, 0.0]
+      S: [30.17e+6, 18.97e+6, 6.21e+6]
+      m: 16.1
       GIc: 0.0
       GIIc: 0.0
       alp0: 0.0
@@ -621,15 +729,16 @@ materials:
       component_id: 4.0
    -  name: glass_biax
       description: Vectorply E-LT-5500, Epikote MGS RIMR 135/Epicure MGS RIMH 1366 epoxy
-      source: MSU composites database 3D property tests, Engineering Mechanics of Composite Materials, Daniel, I & Ishai, O., 1994, pg. 34
+      source: Vectorply E-LT-5500, Hybrid Rule of Mixtures
       orth: 1.0
       rho: 1940.0
-      E: [1.11E10, 1.11E10, 1.67E10]
-      G: [1.353E10, 3.49E9, 3.49E9]
-      nu: [0.5, 0.0, 0.066]
-      Xt: [4.29E7, 4.26E7, 1.53E7]
-      Xc: [7.07E7, 7.07E7, 1.132E8]
-      S: [1.034E8, 1.72E7, 1.32E7]
+      E: [11.0231e+9, 11.0231e+9, 16.0477e+9]
+      G: [13.2314e+9, 3.48748e+9, 3.48748e+9]
+      nu: [0.5, 0.117173, 0.117173]
+      Xt: [46.21e+6, 46.21e+6, 0]
+      Xc: [70.69e+6, 70.69e+6, 0]
+      S: [124.46e+6,18.97e+6,6.21e+6]
+      m: 10
       GIc: 41.0
       GIIc: 170.0
       alp0: 45.0
@@ -644,15 +753,16 @@ materials:
       roll_mass: 181.4368
    -  name: glass_triax
       description: Vectorply E-LT-5500, Epikote MGS RIMR 135/Epicure MGS RIMH 1366 epoxy
-      source: MSU composites database 3D property tests, Engineering Mechanics of Composite Materials, Daniel, I & Ishai, O., 1994, pg. 34
+      source: Vectorply E-LT-5500, Hybrid Rule of Mixtures
       orth: 1.0
       rho: 1940.0
-      E: [2.87E10, 1.66E10, 1.67E10]
-      G: [8.4E9, 3.49E9, 3.49E9]
-      nu: [0.5, 0.0, 0.17]
-      Xt: [3.96E8, 7.64E7, 1.53E7]
-      Xc: [4.489E8, 1.747E8, 1.132E8]
-      S: [1.034E8, 1.72E7, 1.32E7]
+      E: [28.2114e+9, 16.2388e+9, 15.8355e+9]
+      G: [8.24822e+9, 3.49124e+9, 3.49124e+9]
+      nu: [0.497511, 0.18091, 0.27481]
+      Xt: [435.63e+6, 76.44e+6,0]
+      Xc: [343.1e+6, 174.71e+6, 0]
+      S: [85.06e+6, 18.97e+6, 6.21e+6]
+      m: 10
       GIc: 41.0
       GIIc: 170.0
       alp0: 45.0
@@ -665,10 +775,124 @@ materials:
       area_density_dry: 1.4454324430914534
       component_id: 2.0
       roll_mass: 181.4368
-   -  {name: medium_density_foam, description: "Airex C70.130 PVC Foam, source 'https://www.3accorematerials.com/uploads/documents/TDS-AIREX-C70-E_1106.pdf'", orth: 0.0, rho: 130.0, E: 1.292E8, G: 4.8946969696969695E7, nu: 0.32, Xt: 2083000.0, Xc: 1563000.0, S: 1250000.0, GIc: 303.0, GIIc: 3446.0, alp0: 53.0, component_id: 1.0, waste: 0.2, unit_cost: 13.0}
-   -  {name: resin, description: epoxy, E: 1000000.0, nu: 0.3, G: 312500.0, GIc: 0.0, GIIc: 0.0, alp0: 0.0, Xt: 0.0, Xc: 0.0, S: 0.0, rho: 1150.0, alpha: 0.0, orth: 0.0, unit_cost: 3.63}
-   -  {name: steel, description: Steel of the tower, source: 'Standard steel with higher density to account for auxiliary systems of the tower (elevator, stairs, etc)', orth: 0.0, rho: 8500.0, alpha: 0.0, E: 2.1E11, nu: 0.3, G: 6.5625E10, GIc: 0.0, GIIc: 0.0, alp0: 0.0, Xt: 3.6E8, Xc: 3.6E8, S: 0.0, Xy: 4.5E8}
-assembly: {turbine_class: III, turbulence_class: A, drivetrain: Constant_eff, rotor_orientation: Downwind, number_of_blades: 3}
-control: {rated_power: 5000000.0, Vin: 4.0, Vout: 19.0, minOmega: 0.0, maxOmega: 0.9927432785343746, tsr: 10.5, pitch: 0.0, maxTS: 85.0, max_pitch_rate: 0.03488888888888889, max_torque_rate: 4500000.0, PC_zeta: 1.2, PC_omega: 0.3, VS_zeta: 0.5, VS_omega: 0.1, max_pitch: 1.5707963267948966, min_pitch: 0.0, vs_minspd: 0.0, ss_vsgain: 1.0, ss_pcgain: 0.001, ps_percent: 0.8, Flp_omega: 0.0, Flp_zeta: 0.0}
-environment: {air_density: 1.225, air_dyn_viscosity: 1.81E-5, weib_shape_parameter: 2.0, air_speed_sound: 340.0, shear_exp: 0.2, water_density: 1025.0, water_dyn_viscosity: 0.0013351, soil_shear_modulus: 1.4E8, soil_poisson: 0.4}
-costs: {wake_loss_factor: 0.15, fixed_charge_rate: 0.075, bos_per_kW: 459.0, opex_per_kW: 44.0, turbine_number: 120.0}
+   -  name: medium_density_foam
+      description: Airex C70.130 PVC Foam, source 'https://www.3accorematerials.com/uploads/documents/TDS-AIREX-C70-E_1106.pdf'
+      orth: 0.0
+      rho: 130.0
+      E: 0.1425e+9
+      G: 54.e+9
+      nu: 0.3194
+      Xt: 2.083e+6
+      Xc: 1.563e+6
+      S: 1.250e+6
+      GIc: 303.0
+      GIIc: 3446.0
+      alp0: 53.0
+      component_id: 1.0
+      waste: 0.2
+      unit_cost: 13.0
+   -  name: resin
+      description: epoxy
+      E: 1000000.0
+      nu: 0.3
+      G: 312500.0
+      GIc: 0.0
+      GIIc: 0.0
+      alp0: 0.0
+      Xt: 0.0
+      Xc: 0.0
+      S: 0.0
+      rho: 1150.0
+      alpha: 0.0
+      orth: 0.0
+      unit_cost: 3.63
+   -  name: steel
+      description: Steel of the tower
+      source: Standard steel with higher density to account for auxiliary systems of the tower (elevator stairs etc)
+      orth: 0.0
+      rho: 8500.0
+      alpha: 0.0
+      E: 2.1e+11
+      nu: 0.3
+      G: 6.5625e+10
+      GIc: 0.0
+      GIIc: 0.0
+      alp0: 0.0
+      Xt: 3.6e+8
+      Xc: 3.6e+8
+      S: 0.0
+      Xy: 4.5e+8control:
+    supervisory:
+        Vin: 4.0
+        Vout: 25.0
+        maxTS: 85.
+        rated_power: 5.e+6
+        minOmega: 0.0
+        maxOmega: 0.9927432785343746
+    pitch:
+        PC_zeta: 1.1   
+        PC_omega: 0.2  
+        ps_percent: 0.8
+        max_pitch: 1.57
+        max_pitch_rate: 0.03488888888888889
+        min_pitch: 0.
+    torque:
+        control_type: tsr_tracking
+        tsr: 10.5
+        VS_zeta: 0.5  
+        VS_omega: 0.1 
+        max_torque_rate: 4500000.
+        VS_minspd: 0.0
+        VS_maxspd: 2.00000
+    setpoint_smooth:
+        ss_vsgain: 1
+        ss_pcgain: .001
+    shutdown:
+        limit_type: gen_speed
+        limit_value: 2.0
+environment:
+    air_density: 1.225
+    air_dyn_viscosity: 1.81e-5
+    weib_shape_parameter: 2.
+    air_speed_sound: 340.
+    shear_exp: 0.2
+    water_density: 1025.0
+    water_dyn_viscosity: 1.3351e-3
+    soil_shear_modulus: 140.e+6
+    soil_poisson: 0.4
+bos:
+    plant_turbine_spacing: 7
+    plant_row_spacing: 7
+    commissioning_pct: 0.01
+    decommissioning_pct: 0.15
+    distance_to_substation: 50.0
+    distance_to_interconnection: 8.
+    interconnect_voltage: 130
+costs:
+    wake_loss_factor: 0.15
+    fixed_charge_rate: 0.075
+    bos_per_kW: 2979.
+    opex_per_kW: 44.
+    turbine_number: 120
+    labor_rate: 58.8
+    painting_rate: 30.0
+    blade_mass_cost_coeff: 14.6
+    hub_mass_cost_coeff: 3.9
+    pitch_system_mass_cost_coeff: 22.1
+    spinner_mass_cost_coeff: 11.1
+    lss_mass_cost_coeff: 11.9
+    bearing_mass_cost_coeff: 4.5
+    gearbox_mass_cost_coeff: 12.9
+    hss_mass_cost_coeff: 6.8
+    generator_mass_cost_coeff: 12.4
+    bedplate_mass_cost_coeff: 2.9
+    yaw_mass_cost_coeff: 8.3
+    converter_mass_cost_coeff: 18.8
+    transformer_mass_cost_coeff: 18.8
+    hvac_mass_cost_coeff: 124.0
+    cover_mass_cost_coeff: 5.7
+    elec_connec_machine_rating_cost_coeff: 41.85
+    platforms_mass_cost_coeff: 17.1
+    tower_mass_cost_coeff: 2.9
+    controls_machine_rating_cost_coeff: 21.15
+    crane_cost: 12.e+3
