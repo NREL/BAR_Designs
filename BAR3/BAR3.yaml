@@ -670,7 +670,7 @@ materials:
       ply_t: 5.0E-4
       waste: 0.25
       unit_cost: 7.23
-      component_id: 0.0
+      component_id: 0
    -  name: Adhesive
       orth: 0.0
       rho: 1100.0
@@ -709,15 +709,15 @@ materials:
       waste: 0.05
       fiber_density: 2535.5
       area_density_dry: 7.227162215457267
-      component_id: 4.0
+      component_id: 5
    -  name: carbon_uni_industry_baseline
       description: Baseline industry CFRP tested by Sandia National Labs within the BAR Project
       source: https://energy.sandia.gov/download/45350/, RVE analysis
       orth: 1.0
       rho: 1600.0
-      E: [157.528e+9, 9.1e+9, 9.1e+9]
-      G: [3.94e+9, 3.94e+9, 2.599e+9]
-      nu: [0.313211, 0.313211, 0.469221]
+      E: [157.599e+9, 9.1e+9, 9.1e+9]
+      G: [4.131e+9, 4.131e+9, 2.689e+9]
+      nu: [0.3133, 0.3133, 0.47066]
       Xt: [1285.2e+6, 38.1e+6, 0.0]
       Xc: [878.21e+6, 82.18e+6, 0.0]
       S: [30.17e+6, 18.97e+6, 6.21e+6]
@@ -732,7 +732,7 @@ materials:
       waste: 0.05
       fiber_density: 1800.0
       area_density_dry: 6.230769230769231
-      component_id: 5.0
+      component_id: 4
    -  name: glass_biax
       description: Vectorply E-LT-5500, Epikote MGS RIMR 135/Epicure MGS RIMH 1366 epoxy
       source: Vectorply E-LT-5500, Hybrid Rule of Mixtures
@@ -755,7 +755,7 @@ materials:
       unit_cost: 3.0
       fiber_density: 2535.5
       area_density_dry: 1.4454324430914534
-      component_id: 3.0
+      component_id: 3
       roll_mass: 181.4368
    -  name: glass_triax
       description: Vectorply E-LT-5500, Epikote MGS RIMR 135/Epicure MGS RIMH 1366 epoxy
@@ -779,7 +779,7 @@ materials:
       waste: 0.15
       fiber_density: 2535.5
       area_density_dry: 1.4454324430914534
-      component_id: 2.0
+      component_id: 2
       roll_mass: 181.4368
    -  name: medium_density_foam
       description: Airex C70.130 PVC Foam, source 'https://www.3accorematerials.com/uploads/documents/TDS-AIREX-C70-E_1106.pdf'
@@ -794,7 +794,7 @@ materials:
       GIc: 303.0
       GIIc: 3446.0
       alp0: 53.0
-      component_id: 1.0
+      component_id: 1
       waste: 0.2
       unit_cost: 13.0
    -  name: resin
