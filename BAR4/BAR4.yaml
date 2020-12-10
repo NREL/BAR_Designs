@@ -808,7 +808,8 @@ materials:
       Xt: 3.6e+8
       Xc: 3.6e+8
       S: 0.0
-      Xy: 4.5e+8control:
+      Xy: 4.5e+8
+control:
     supervisory:
         Vin: 4.0
         Vout: 25.0
