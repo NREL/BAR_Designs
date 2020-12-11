@@ -8,7 +8,8 @@ A publication describing the models is under submission at the Journal of Wind E
 * BAR1 - Downwind flexible rail-transportable with GFRP spar caps
 * BAR2 - Downwind flexible rail-transportable with industry-baseline CFRP spar caps
 * BAR3 - Upwind segmented blades with CFRP spar caps
-* BAR4 - Upwind flexible rail-transportable with industry-baseline CFRP spar caps cone 3 deg uptilt 5 deg
+* BAR4 - Upwind flexible rail-transportable with industry-baseline CFRP spar caps, 100-m long blades 
+* BAR4old - Upwind flexible rail-transportable with industry-baseline CFRP spar caps, 90-m long blade, cone 3 deg uptilt 5 deg
 * BAR5 - Downwind flexible rail-transportable with heavy-tow CFRP spar caps
 
 ## Controller
