@@ -1,91 +1,91 @@
 --------- BEAMDYN with OpenFAST INPUT FILE -------------------------------------------
-Generated with AeroElasticSE FAST driver
+BAR1 blade
 ---------------------- SIMULATION CONTROL --------------------------------------
-True                   Echo        - Echo input data to "<RootName>.ech" (flag)
-True                   QuasiStaticInit - Use quasistatic pre-conditioning with centripetal accelerations in initialization (flag) [dynamic solve only]
-0                      rhoinf      - Numerical damping parameter for generalized-alpha integrator
-2                      quadrature  - Quadrature method: 1=Gaussian; 2=Trapezoidal (switch)
-"DEFAULT"              refine      - Refinement factor for trapezoidal quadrature (-). DEFAULT = 1 [used only when quadrature=2]
-"DEFAULT"              n_fact      - Factorization frequency (-). DEFAULT = 5
-"DEFAULT"                DTBeam      - Time step size (s).
-"DEFAULT"                load_retries - Number of factored load retries before quitting the aimulation
-"DEFAULT"                NRMax       - Max number of iterations in Newton-Ralphson algorithm (-). DEFAULT = 10
-"DEFAULT"                stop_tol    - Tolerance for stopping criterion (-)
-"DEFAULT"              tngt_stf_fd - Flag to use finite differenced tangent stiffness matrix (-)
-"DEFAULT"              tngt_stf_comp - Flag to compare analytical finite differenced tangent stiffness matrix  (-)
-"DEFAULT"                tngt_stf_pert - perturbation size for finite differencing (-)
-"DEFAULT"                tngt_stf_difftol - Maximum allowable relative difference between analytical and fd tangent stiffness (-)
-True                   RotStates   - Orient states in the rotating frame during linearization? (flag) [used only when linearizing]
+True          Echo            - Echo input data to "<RootName>.ech" (flag)
+True          QuasiStaticInit - Use quasistatic pre-conditioning with centripetal accelerations in initialization (flag) [dynamic solve only]
+ 0            rhoinf          - Numerical damping parameter for generalized-alpha integrator
+ 2            quadrature      - Quadrature method: 1=Gaussian; 2=Trapezoidal (switch)
+"DEFAULT"     refine          - Refinement factor for trapezoidal quadrature (-). DEFAULT = 1 [used only when quadrature=2]
+"DEFAULT"     n_fact          - Factorization frequency (-). DEFAULT = 5
+"DEFAULT"     DTBeam          - Time step size (s).
+"DEFAULT"     load_retries    - Number of factored load retries before quitting the aimulation
+"DEFAULT"     NRMax           - Max number of iterations in Newton-Ralphson algorithm (-). DEFAULT = 10
+"DEFAULT"     stop_tol        - Tolerance for stopping criterion (-)
+"DEFAULT"     tngt_stf_fd     - Flag to use finite differenced tangent stiffness matrix (-)
+"DEFAULT"     tngt_stf_comp   - Flag to compare analytical finite differenced tangent stiffness matrix  (-)
+"DEFAULT"     tngt_stf_pert   - perturbation size for finite differencing (-)
+"DEFAULT"     tngt_stf_difftol- Maximum allowable relative difference between analytical and fd tangent stiffness (-)
+True          RotStates       - Orient states in the rotating frame during linearization? (flag) [used only when linearizing]
 ---------------------- GEOMETRY PARAMETER --------------------------------------
-1                      member_total - Total number of members (-)
-50                     kp_total    - Total number of key points (-) [must be at least 3]
-1 50                               - Member number; Number of key points in this member
-        kp_xr                 kp_yr                 kp_zr             initial_twist    
-         (m)                   (m)                   (m)                  (deg)        
--0.00000000000000e+00  0.00000000000000e+00  0.00000000000000e+00  2.00020000000000e+01
- 0.00000000000000e+00  0.00000000000000e+00  2.04074000000000e+00  1.83471000000000e+01
- 0.00000000000000e+00  0.00000000000000e+00  4.08148000000000e+00  1.67220000000000e+01
- 0.00000000000000e+00  0.00000000000000e+00  6.12222000000000e+00  1.51631000000000e+01
- 0.00000000000000e+00  0.00000000000000e+00  8.16296000000000e+00  1.37126000000000e+01
- 0.00000000000000e+00  0.00000000000000e+00  1.02037000000000e+01  1.23284000000000e+01
- 0.00000000000000e+00  0.00000000000000e+00  1.22444000000000e+01  1.09868000000000e+01
- 0.00000000000000e+00  0.00000000000000e+00  1.42852000000000e+01  9.68989000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  1.63259000000000e+01  8.52355000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  1.83667000000000e+01  7.64928000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  2.04074000000000e+01  7.01232000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  2.24481000000000e+01  6.65219000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  2.44889000000000e+01  6.35209000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  2.65296000000000e+01  6.12746000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  2.85704000000000e+01  5.92722000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  3.06111000000000e+01  5.75309000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  3.26518000000000e+01  5.58674000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  3.46926000000000e+01  5.41922000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  3.67333000000000e+01  5.22400000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  3.87741000000000e+01  5.00093000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  4.08148000000000e+01  4.73841000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  4.28555000000000e+01  4.43883000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  4.48963000000000e+01  4.12398000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  4.69370000000000e+01  3.77693000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  4.89778000000000e+01  3.42227000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  5.10185000000000e+01  3.05312000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  5.30592000000000e+01  2.67688000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  5.51000000000000e+01  2.29690000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  5.71407000000000e+01  1.91733000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  5.91815000000000e+01  1.53539000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  6.12222000000000e+01  1.14718000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  6.32629000000000e+01  7.21465000000000e-01
- 0.00000000000000e+00  0.00000000000000e+00  6.53037000000000e+01  2.69262000000000e-01
- 0.00000000000000e+00  0.00000000000000e+00  6.73444000000000e+01 -2.03661000000000e-01
- 0.00000000000000e+00  0.00000000000000e+00  6.93852000000000e+01 -6.73209000000000e-01
- 0.00000000000000e+00  0.00000000000000e+00  7.14259000000000e+01 -1.12065000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  7.34666000000000e+01 -1.52731000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  7.55074000000000e+01 -1.89590000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  7.75481000000000e+01 -2.15703000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  7.95889000000000e+01 -2.37942000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  8.16296000000000e+01 -2.49951000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  8.36703000000000e+01 -2.61241000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  8.57111000000000e+01 -2.71648000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  8.77518000000000e+01 -2.80814000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  8.97926000000000e+01 -2.89446000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  9.18333000000000e+01 -2.96194000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  9.38740000000000e+01 -3.02026000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  9.59148000000000e+01 -3.06360000000000e+00
- 0.00000000000000e+00  0.00000000000000e+00  9.79555000000000e+01 -3.08761000000000e+00
--0.00000000000000e+00  0.00000000000000e+00  9.99963000000000e+01 -3.10292000000000e+00
+          1   member_total    - Total number of members (-)
+         50   kp_total        - Total number of key points (-) [must be at least 3]
+     1     50                 - Member number; Number of key points in this member
+		 kp_xr 			 kp_yr 			 kp_zr 		 initial_twist
+		  (m)  			  (m)  			  (m)  		   (deg)
+	 -0.00000e+00 	 0.00000e+00 	 0.00000e+00 	 2.00020e+01 
+	 0.00000e+00 	 0.00000e+00 	 2.04074e+00 	 1.83471e+01 
+	 0.00000e+00 	 0.00000e+00 	 4.08148e+00 	 1.67220e+01 
+	 0.00000e+00 	 0.00000e+00 	 6.12222e+00 	 1.51631e+01 
+	 0.00000e+00 	 0.00000e+00 	 8.16296e+00 	 1.37126e+01 
+	 0.00000e+00 	 0.00000e+00 	 1.02037e+01 	 1.23284e+01 
+	 0.00000e+00 	 0.00000e+00 	 1.22444e+01 	 1.09868e+01 
+	 0.00000e+00 	 0.00000e+00 	 1.42852e+01 	 9.68989e+00 
+	 0.00000e+00 	 0.00000e+00 	 1.63259e+01 	 8.52355e+00 
+	 0.00000e+00 	 0.00000e+00 	 1.83667e+01 	 7.64928e+00 
+	 0.00000e+00 	 0.00000e+00 	 2.04074e+01 	 7.01232e+00 
+	 0.00000e+00 	 0.00000e+00 	 2.24481e+01 	 6.65219e+00 
+	 0.00000e+00 	 0.00000e+00 	 2.44889e+01 	 6.35209e+00 
+	 0.00000e+00 	 0.00000e+00 	 2.65296e+01 	 6.12746e+00 
+	 0.00000e+00 	 0.00000e+00 	 2.85704e+01 	 5.92722e+00 
+	 0.00000e+00 	 0.00000e+00 	 3.06111e+01 	 5.75309e+00 
+	 0.00000e+00 	 0.00000e+00 	 3.26518e+01 	 5.58674e+00 
+	 0.00000e+00 	 0.00000e+00 	 3.46926e+01 	 5.41922e+00 
+	 0.00000e+00 	 0.00000e+00 	 3.67333e+01 	 5.22400e+00 
+	 0.00000e+00 	 0.00000e+00 	 3.87741e+01 	 5.00093e+00 
+	 0.00000e+00 	 0.00000e+00 	 4.08148e+01 	 4.73841e+00 
+	 0.00000e+00 	 0.00000e+00 	 4.28555e+01 	 4.43883e+00 
+	 0.00000e+00 	 0.00000e+00 	 4.48963e+01 	 4.12398e+00 
+	 0.00000e+00 	 0.00000e+00 	 4.69370e+01 	 3.77693e+00 
+	 0.00000e+00 	 0.00000e+00 	 4.89778e+01 	 3.42227e+00 
+	 0.00000e+00 	 0.00000e+00 	 5.10185e+01 	 3.05312e+00 
+	 0.00000e+00 	 0.00000e+00 	 5.30592e+01 	 2.67688e+00 
+	 0.00000e+00 	 0.00000e+00 	 5.51000e+01 	 2.29690e+00 
+	 0.00000e+00 	 0.00000e+00 	 5.71407e+01 	 1.91733e+00 
+	 0.00000e+00 	 0.00000e+00 	 5.91815e+01 	 1.53539e+00 
+	 0.00000e+00 	 0.00000e+00 	 6.12222e+01 	 1.14718e+00 
+	 0.00000e+00 	 0.00000e+00 	 6.32629e+01 	 7.21465e-01 
+	 0.00000e+00 	 0.00000e+00 	 6.53037e+01 	 2.69262e-01 
+	 0.00000e+00 	 0.00000e+00 	 6.73444e+01 	 -2.03661e-01 
+	 0.00000e+00 	 0.00000e+00 	 6.93852e+01 	 -6.73209e-01 
+	 0.00000e+00 	 0.00000e+00 	 7.14259e+01 	 -1.12065e+00 
+	 0.00000e+00 	 0.00000e+00 	 7.34666e+01 	 -1.52731e+00 
+	 0.00000e+00 	 0.00000e+00 	 7.55074e+01 	 -1.89590e+00 
+	 0.00000e+00 	 0.00000e+00 	 7.75481e+01 	 -2.15703e+00 
+	 0.00000e+00 	 0.00000e+00 	 7.95889e+01 	 -2.37942e+00 
+	 0.00000e+00 	 0.00000e+00 	 8.16296e+01 	 -2.49951e+00 
+	 0.00000e+00 	 0.00000e+00 	 8.36703e+01 	 -2.61241e+00 
+	 0.00000e+00 	 0.00000e+00 	 8.57111e+01 	 -2.71648e+00 
+	 0.00000e+00 	 0.00000e+00 	 8.77518e+01 	 -2.80814e+00 
+	 0.00000e+00 	 0.00000e+00 	 8.97926e+01 	 -2.89446e+00 
+	 0.00000e+00 	 0.00000e+00 	 9.18333e+01 	 -2.96194e+00 
+	 0.00000e+00 	 0.00000e+00 	 9.38740e+01 	 -3.02026e+00 
+	 0.00000e+00 	 0.00000e+00 	 9.59148e+01 	 -3.06360e+00 
+	 0.00000e+00 	 0.00000e+00 	 9.79555e+01 	 -3.08761e+00 
+	 -0.00000e+00 	 0.00000e+00 	 9.99963e+01 	 -3.10292e+00 
 ---------------------- MESH PARAMETER ------------------------------------------
-5                      order_elem  - Order of interpolation (basis) function (-)
+          5   order_elem     - Order of interpolation (basis) function (-)
 ---------------------- MATERIAL PARAMETER --------------------------------------
-"/Users/pbortolo/work/3_projects/3_BAR/BAR_Designs/BAR1/OpenFAST/BAR1_BeamDyn_Blade.dat" BldFile     - Name of file containing properties for blade (quoted string)
+"BAR1_BeamDyn_Blade.dat"    BldFile - Name of file containing properties for blade (quoted string)
 ---------------------- PITCH ACTUATOR PARAMETERS -------------------------------
-False                  UsePitchAct - Whether a pitch actuator should be used (flag)
-200.0                  PitchJ      - Pitch actuator inertia (kg-m^2) [used only when UsePitchAct is true]
-20000000.0             PitchK      - Pitch actuator stiffness (kg-m^2/s^2) [used only when UsePitchAct is true]
-500000.0               PitchC      - Pitch actuator damping (kg-m^2/s) [used only when UsePitchAct is true]
+False         UsePitchAct - Whether a pitch actuator should be used (flag)
+        200   PitchJ      - Pitch actuator inertia (kg-m^2) [used only when UsePitchAct is true]
+      2E+07   PitchK      - Pitch actuator stiffness (kg-m^2/s^2) [used only when UsePitchAct is true]
+     500000   PitchC      - Pitch actuator damping (kg-m^2/s) [used only when UsePitchAct is true]
 ---------------------- OUTPUTS -------------------------------------------------
-True                   SumPrint    - Print summary data to "<RootName>.sum" (flag)
-"ES10.3E2"             OutFmt      - Format used for text tabular output, excluding the time channel.
-9                      NNodeOuts   - Number of nodes to output to file [0 - 9] (-)
-3, 6, 9, 12, 15, 18, 21, 24, 27     OutNd          - Nodes whose values will be output  (-) OutNd       - Nodes whose values will be output  (-) OutNd       - Nodes whose values will be output  (-) OutNd       - Nodes whose values will be output  (-) OutNd       - Nodes whose values will be output  (-) OutNd       - Nodes whose values will be output  (-) OutNd       - Nodes whose values will be output  (-) OutNd       - Nodes whose values will be output  (-) OutNd       - Nodes whose values will be output  (-)
+True          SumPrint       - Print summary data to "<RootName>.sum" (flag)
+"ES10.3E2"    OutFmt         - Format used for text tabular output, excluding the time channel.
+          1   NNodeOuts      - Number of nodes to output to file [0 - 9] (-)
+          1,          2,          3,          4,          5,          6    OutNd          - Nodes whose values will be output  (-)
           OutList            - The next line(s) contains a list of output parameters. See OutListParameters.xlsx for a listing of available output channels, (-)
 "N1Fxl"
 "N1Fyl"

@@ -3,9 +3,9 @@ Generated with AeroElasticSE FAST driver
 ---------------------- SIMULATION CONTROL --------------------------------------
 False                  Echo        - Echo input data to "<RootName>.ech" (flag)
 3                      Method      - Integration method: {1: RK4, 2: AB4, or 3: ABM4} (-)
-"DEFAULT"              DT          Integration time step (s)
+default                DT          Integration time step (s)
 ---------------------- ENVIRONMENTAL CONDITION ---------------------------------
-9.80665                Gravity     - Gravitational acceleration (m/s^2)
+9.81                   Gravity     - Gravitational acceleration (m/s^2)
 ---------------------- DEGREES OF FREEDOM --------------------------------------
 True                   FlapDOF1    - First flapwise blade mode DOF (flag)
 True                   FlapDOF2    - Second flapwise blade mode DOF (flag)
@@ -27,12 +27,12 @@ False                  PtfmYDOF    - Platform yaw rotation DOF (flag)
 ---------------------- INITIAL CONDITIONS --------------------------------------
 0.0                    OoPDefl     - Initial out-of-plane blade-tip displacement (meters)
 0.0                    IPDefl      - Initial in-plane blade-tip deflection (meters)
-0.0                    BlPitch(1)  - Blade 1 initial pitch (degrees)
-0.0                    BlPitch(2)  - Blade 2 initial pitch (degrees)
-0.0                    BlPitch(3)  - Blade 3 initial pitch (degrees) [unused for 2 blades]
+0.017453292519943295   BlPitch(1)  - Blade 1 initial pitch (degrees)
+0.017453292519943295   BlPitch(2)  - Blade 2 initial pitch (degrees)
+0.017453292519943295   BlPitch(3)  - Blade 3 initial pitch (degrees) [unused for 2 blades]
 0.0                    TeetDefl    - Initial or fixed teeter angle (degrees) [unused for 3 blades]
 0.0                    Azimuth     - Initial azimuth angle for blade 1 (degrees)
-6.0                    RotSpeed    - Initial or fixed rotor speed (rpm)
+5.0                    RotSpeed    - Initial or fixed rotor speed (rpm)
 0.0                    NacYaw      - Initial or fixed nacelle-yaw angle (degrees)
 0.0                    TTDspFA     - Initial fore-aft tower-top displacement (meters)
 0.0                    TTDspSS     - Initial side-to-side tower-top displacement (meters)
@@ -44,7 +44,7 @@ False                  PtfmYDOF    - Platform yaw rotation DOF (flag)
 0.0                    PtfmYaw     - Initial or fixed yaw rotational displacement of platform (degrees)
 ---------------------- TURBINE CONFIGURATION -----------------------------------
 3                      NumBl       - Number of blades (-)
-102.99626780840836     TipRad      - The distance from the rotor apex to the blade tip (meters)
+102.99989129145149     TipRad      - The distance from the rotor apex to the blade tip (meters)
 3.0                    HubRad      - The distance from the rotor apex to the blade root (meters)
 2.0                    PreCone(1)  - Blade 1 cone angle (degrees)
 2.0                    PreCone(2)  - Blade 2 cone angle (degrees)
@@ -54,15 +54,15 @@ False                  PtfmYDOF    - Platform yaw rotation DOF (flag)
 0.0                    Delta3      - Delta-3 angle for teetering rotors (degrees) [unused for 3 blades]
 0.0                    AzimB1Up    - Azimuth value to use for I/O when blade 1 points up (degrees)
 7.0                    OverHang    - Distance from yaw axis to rotor apex [3 blades] or teeter pin [2 blades] (meters)
--1.912                 ShftGagL    - Distance from rotor apex [3 blades] or teeter pin [2 blades] to shaft strain gages [positive for upwind rotors] (meters)
+0.0                    ShftGagL    - Distance from rotor apex [3 blades] or teeter pin [2 blades] to shaft strain gages [positive for upwind rotors] (meters)
 5.0                    ShftTilt    - Rotor shaft tilt angle (degrees)
--1.1623564554955739    NacCMxn     - Downwind distance from the tower-top to the nacelle CM (meters)
-0.0                    NacCMyn     - Lateral  distance from the tower-top to the nacelle CM (meters)
-0.09813897046565273    NacCMzn     - Vertical distance from the tower-top to the nacelle CM (meters)
-0.714217558619         NcIMUxn     - Downwind distance from the tower-top to the nacelle IMU (meters)
+0.051205964264895064   NacCMxn     - Downwind distance from the tower-top to the nacelle CM (meters)
+0.28570918559927005    NacCMyn     - Lateral  distance from the tower-top to the nacelle CM (meters)
+0.19539820324132925    NacCMzn     - Vertical distance from the tower-top to the nacelle CM (meters)
+0.0                    NcIMUxn     - Downwind distance from the tower-top to the nacelle IMU (meters)
 0.0                    NcIMUyn     - Lateral  distance from the tower-top to the nacelle IMU (meters)
-0.239584312655         NcIMUzn     - Vertical distance from the tower-top to the nacelle IMU (meters)
-3.0934301742           Twr2Shft    - Vertical distance from the tower-top to the rotor shaft (meters)
+0.0                    NcIMUzn     - Vertical distance from the tower-top to the nacelle IMU (meters)
+3.0                    Twr2Shft    - Vertical distance from the tower-top to the rotor shaft (meters)
 137.0                  TowerHt     - Height of tower above ground level [onshore] or MSL [offshore] (meters)
 0.0                    TowerBsHt   - Height of tower base above ground level [onshore] or MSL [offshore] (meters)
 0.0                    PtfmCMxt    - Downwind distance from the ground level [onshore] or MSL [offshore] to the platform CM (meters)
@@ -73,12 +73,12 @@ False                  PtfmYDOF    - Platform yaw rotation DOF (flag)
 0.0                    TipMass(1)  - Tip-brake mass, blade 1 (kg)
 0.0                    TipMass(2)  - Tip-brake mass, blade 2 (kg)
 0.0                    TipMass(3)  - Tip-brake mass, blade 3 (kg) [unused for 2 blades]
-108070.48581602736     HubMass     - Hub mass (kg)
-805236.7717696002      HubIner     - Hub inertia about rotor axis [3 blades] or teeter axis [2 blades] (kg m^2)
-590.965098296          GenIner     - Generator inertia about HSS (kg m^2)
-376624.16326842137     NacMass     - Nacelle mass (kg)
-3010788.162143145      NacYIner    - Nacelle inertia about yaw axis (kg m^2)
-16974.078585601852     YawBrMass   - Yaw bearing mass (kg)
+34987.84825725732      HubMass     - Hub mass (kg)
+293216.842555305       HubIner     - Hub inertia about rotor axis [3 blades] or teeter axis [2 blades] (kg m^2)
+0.0                    GenIner     - Generator inertia about HSS (kg m^2)
+434221.7459899583      NacMass     - Nacelle mass (kg)
+2246850.1513400497     NacYIner    - Nacelle inertia about yaw axis (kg m^2)
+19104.318124179037     YawBrMass   - Yaw bearing mass (kg)
 0.0                    PtfmMass    - Platform mass (kg)
 0.0                    PtfmRIner   - Platform inertia for roll tilt rotation about the platform CM (kg m^2)
 0.0                    PtfmPIner   - Platform inertia for pitch tilt rotation about the platform CM (kg m^2)
@@ -100,170 +100,33 @@ False                  PtfmYDOF    - Platform yaw rotation DOF (flag)
 ---------------------- DRIVETRAIN ----------------------------------------------
 95.0                   GBoxEff     - Gearbox efficiency (%)
 96.76                  GBRatio     - Gearbox ratio (-)
-858099807.855          DTTorSpr    - Drivetrain torsional spring (N-m/rad)
-6828541.30432          DTTorDmp    - Drivetrain torsional damper (N-m/(rad/s))
+0.0                    DTTorSpr    - Drivetrain torsional spring (N-m/rad)
+0.0                    DTTorDmp    - Drivetrain torsional damper (N-m/(rad/s))
 ---------------------- FURLING -------------------------------------------------
 False                  Furling     - Read in additional model properties for furling turbine (flag) [must currently be FALSE)
-"unused"               FurlFile    - Name of file containing furling properties (quoted string) [unused when Furling=False]
+"none"                 FurlFile    - Name of file containing furling properties (quoted string) [unused when Furling=False]
 ---------------------- TOWER ---------------------------------------------------
 20                     TwrNodes    - Number of tower nodes used for analysis (-)
 "BAR1_ElastoDyn_tower.dat" TwrFile     - Name of file containing tower properties (quoted string)
 ---------------------- OUTPUT --------------------------------------------------
-True                   SumPrint    - Print summary data to "<RootName>.sum" (flag)
+False                  SumPrint    - Print summary data to "<RootName>.sum" (flag)
 1                      OutFile     - Switch to determine where output will be placed: {1: in module output file only; 2: in glue code output file only; 3: both} (currently unused)
 True                   TabDelim    - Use tab delimiters in text tabular output file? (flag) (currently unused)
 "ES10.3E2"             OutFmt      - Format used for text tabular output (except time).  Resulting field should be 10 characters. (quoted string) (currently unused)
 0.0                    TStart      - Time to begin tabular output (s) (currently unused)
 1                      DecFact     - Decimation factor for tabular output {1: output every time step} (-) (currently unused)
-1                      NTwGages    - Number of tower nodes that have strain gages for output [0 to 9] (-)
-1                      TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0]
+0                      NTwGages    - Number of tower nodes that have strain gages for output [0 to 9] (-)
+0                      TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0]
 9                      NBlGages    - Number of blade nodes that have strain gages for output [0 to 9] (-)
-4, 7, 10, 13, 16, 18, 21, 24, 27 BldGagNd    - List of blade nodes that have strain gages [1 to BldNodes] (-) [unused if NBlGages=0]
+6, 11, 16, 21, 26, 31, 36, 41, 46 BldGagNd    - List of blade nodes that have strain gages [1 to BldNodes] (-) [unused if NBlGages=0]
                    OutList             - The next line(s) contains a list of output parameters.  See OutListParameters.xlsx for a listing of available output channels, (-)
 "BldPitch1"
 "GenSpeed"
-"HSSBrTq"
-"HSShftTq"
-"LSSTipMya"
-"LSSTipMys"
-"LSSTipMza"
-"LSSTipMzs"
-"LSSTipPxa"
-"LSShftFxa"
-"LSShftFya"
-"LSShftFys"
-"LSShftFza"
-"LSShftFzs"
-"LSShftMxa"
-"NcIMUTAxs"
-"NcIMUTAys"
-"PtchPMzc1"
-"PtchPMzc2"
-"PtchPMzc3"
-"RootFxb1"
-"RootFxb2"
-"RootFxb3"
-"RootFxc1"
-"RootFxc2"
-"RootFxc3"
-"RootFyb1"
-"RootFyb2"
-"RootFyb3"
-"RootFyc1"
-"RootFyc2"
-"RootFyc3"
-"RootFzb1"
-"RootFzb2"
-"RootFzb3"
-"RootMxb1"
-"RootMxb2"
-"RootMxb3"
-"RootMxc1"
-"RootMxc2"
-"RootMxc3"
-"RootMyb1"
-"RootMyb2"
-"RootMyb3"
-"RootMyc1"
-"RootMyc2"
-"RootMyc3"
-"RootMzb1"
-"RootMzb2"
-"RootMzb3"
-"RotSpeed"
-"Spn1FLxb1"
-"Spn1FLyb1"
-"Spn1FLzb1"
-"Spn1MLxb1"
-"Spn1MLyb1"
-"Spn1MLzb1"
-"Spn2FLxb1"
-"Spn2FLyb1"
-"Spn2FLzb1"
-"Spn2MLxb1"
-"Spn2MLyb1"
-"Spn2MLzb1"
-"Spn3FLxb1"
-"Spn3FLyb1"
-"Spn3FLzb1"
-"Spn3MLxb1"
-"Spn3MLyb1"
-"Spn3MLzb1"
-"Spn4FLxb1"
-"Spn4FLyb1"
-"Spn4FLzb1"
-"Spn4MLxb1"
-"Spn4MLyb1"
-"Spn4MLzb1"
-"Spn5FLxb1"
-"Spn5FLyb1"
-"Spn5FLzb1"
-"Spn5MLxb1"
-"Spn5MLyb1"
-"Spn5MLzb1"
-"Spn6FLxb1"
-"Spn6FLyb1"
-"Spn6FLzb1"
-"Spn6MLxb1"
-"Spn6MLyb1"
-"Spn6MLzb1"
-"Spn7FLxb1"
-"Spn7FLyb1"
-"Spn7FLzb1"
-"Spn7MLxb1"
-"Spn7MLyb1"
-"Spn7MLzb1"
-"Spn8FLxb1"
-"Spn8FLyb1"
-"Spn8FLzb1"
-"Spn8MLxb1"
-"Spn8MLyb1"
-"Spn8MLzb1"
-"Spn9FLxb1"
-"Spn9FLyb1"
-"Spn9FLzb1"
-"Spn9MLxb1"
-"Spn9MLyb1"
-"Spn9MLzb1"
-"TipClrnc1"
-"TipClrnc2"
-"TipClrnc3"
-"TipDxb1"
-"TipDxb2"
-"TipDxb3"
-"TipDxc1"
-"TipDxc2"
-"TipDxc3"
-"TipDyb1"
-"TipDyb2"
-"TipDyb3"
-"TipDyc1"
-"TipDyc2"
-"TipDyc3"
-"TipDzb1"
-"TipDzb2"
-"TipDzb3"
-"TipDzc1"
-"TipDzc2"
-"TipDzc3"
 "TwrBsFxt"
 "TwrBsFyt"
 "TwrBsFzt"
 "TwrBsMxt"
 "TwrBsMyt"
 "TwrBsMzt"
-"YawBrFxn"
-"YawBrFxp"
-"YawBrFyn"
-"YawBrFyp"
-"YawBrFzn"
-"YawBrMxn"
-"YawBrMxp"
-"YawBrMyn"
-"YawBrMyp"
-"YawBrMzn"
-"YawBrTDxt"
-"YawBrTDyt"
-"YawPzn"
 END of input file (the word "END" must appear in the first 3 columns of this last OutList line)
 ---------------------------------------------------------------------------------------
