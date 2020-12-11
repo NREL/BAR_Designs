@@ -123,4 +123,10 @@ True                   TabDelim    - Use tab delimiters in text tabular output f
 END of input file (the word "END" must appear in the first 3 columns of this last OutList line)
 "BldPitch1"
 "GenSpeed"
+"TwrBsFxt"
+"TwrBsFyt"
+"TwrBsFzt"
+"TwrBsMxt"
+"TwrBsMyt"
+"TwrBsMzt"
 ---------------------------------------------------------------------------------------
