@@ -45,18 +45,18 @@ Generated with AeroElasticSE FAST driver
  9.655172413793103e-01  3.168450824275862e-01 -3.344989579247662e+00  1.317498413621269e+01  1.330715400251486e+06  1.014204686024202e+07
  1.000000000000000e+00  3.409090000000000e-01 -3.371644966727985e+00  6.599927577744205e+00  3.981557770309758e+05  3.143544016890466e+06
 ---------------------- BLADE MODE SHAPES ---------------------------------------
--0.6551955080829623    BldFl1Sh(2) - Flap mode 1, coeff of x^2
-6.2095149450497376     BldFl1Sh(3) -            , coeff of x^3
--9.613129765414941     BldFl1Sh(4) -            , coeff of x^4
-6.984324378049495      BldFl1Sh(5) -            , coeff of x^5
--1.9255140496013283    BldFl1Sh(6) -            , coeff of x^6
-0.8037206279679249     BldFl2Sh(2) - Flap mode 2, coeff of x^2
--7.815203844386647     BldFl2Sh(3) -            , coeff of x^3
-16.951691181836345     BldFl2Sh(4) -            , coeff of x^4
--15.131311645978103    BldFl2Sh(5) -            , coeff of x^5
-6.191103680560479      BldFl2Sh(6) -            , coeff of x^6
-0.39555866836679054    BldEdgSh(2) - Edge mode 1, coeff of x^2
-3.8687287797603327     BldEdgSh(3) -            , coeff of x^3
--8.030252250882445     BldEdgSh(4) -            , coeff of x^4
-6.933907240651992      BldEdgSh(5) -            , coeff of x^5
--2.16794243789667      BldEdgSh(6) -            , coeff of x^6
+-0.6550358704157353    BldFl1Sh(2) - Flap mode 1, coeff of x^2
+6.208053507482694      BldFl1Sh(3) -            , coeff of x^3
+-9.60987740901028      BldFl1Sh(4) -            , coeff of x^4
+6.98124410322227       BldFl1Sh(5) -            , coeff of x^5
+-1.924384331278947     BldFl1Sh(6) -            , coeff of x^6
+0.8042963480624106     BldFl2Sh(2) - Flap mode 2, coeff of x^2
+-7.817545464818483     BldFl2Sh(3) -            , coeff of x^3
+16.956881368282296     BldFl2Sh(4) -            , coeff of x^4
+-15.137163863220138    BldFl2Sh(5) -            , coeff of x^5
+6.193531611693913      BldFl2Sh(6) -            , coeff of x^6
+0.3955375369010025     BldEdgSh(2) - Edge mode 1, coeff of x^2
+3.86865972931342       BldEdgSh(3) -            , coeff of x^3
+-8.029941120245956     BldEdgSh(4) -            , coeff of x^4
+6.933481255151898      BldEdgSh(5) -            , coeff of x^5
+-2.1677374011203647    BldEdgSh(6) -            , coeff of x^6
