@@ -2,9 +2,9 @@
 Generated with AeroElasticSE FAST driver
 ---------------------------------------------------------------------------------------------------------------
 False                  Echo        - Echo input data to <RootName>.ech (flag)
-1                      WindType       - switch for wind file type (1=steady; 2=uniform; 3=binary TurbSim FF; 4=binary Bladed-style FF; 5=HAWC format; 6=User defined; 7=native Bladed FF)
+1                      WindType    - switch for wind file type (1=steady; 2=uniform; 3=binary TurbSim FF; 4=binary Bladed-style FF; 5=HAWC format; 6=User defined; 7=native Bladed FF)
 0.0                    PropagationDir - Direction of wind propagation (meteoroligical rotation from aligned with X (positive rotates towards -Y) -- degrees)
-0                      VFlowAng       - Upflow angle (degrees) (not used for native Bladed format WindType=7)
+0.0                    VFlowAng    - Upflow angle (degrees) (not used for native Bladed format WindType=7)
 1                      NWindVel    - Number of points to output the wind velocity    (0 to 9)
 0.0                    WindVxiList - List of coordinates in the inertial X direction (m)
 0.0                    WindVyiList - List of coordinates in the inertial Y direction (m)
@@ -15,7 +15,7 @@ False                  Echo        - Echo input data to <RootName>.ech (flag)
 0.2                    PLexp       - Power law exponent                              (-)
 ================== Parameters for Uniform wind file   [used only for WindType = 2] ============================
 "none"                 Filename_Uni - Filename of time series data for uniform wind field.      (-)
-140.0                  RefHt_Uni       - Reference height for horizontal wind speed                (m)
+140.0                  RefHt_Uni   - Reference height for horizontal wind speed                (m)
 1.0                    RefLength   - Reference length for linear horizontal and vertical sheer (-)
 ================== Parameters for Binary TurbSim Full-Field files   [used only for WindType = 3] ==============
 "none"                 FileName_BTS - Name of the Full field wind file to use (.bts)
@@ -32,7 +32,7 @@ False                  TowerFile   - Have tower file (.twr) (flag)
 10                     dx          - distance (in meters) between points in the x direction    (m)
 10                     dy          - distance (in meters) between points in the y direction    (m)
 10                     dz          - distance (in meters) between points in the z direction    (m)
-140.0                  RefHt_Hawc  - reference height; the height (in meters) of the vertical center of the grid (m)
+0.0                    RefHt_Hawc  - reference height; the height (in meters) of the vertical center of the grid (m)
 -------------   Scaling parameters for turbulence   ---------------------------------------------------------
 0                      ScaleMethod - Turbulence scaling method   [0 = none, 1 = direct scaling, 2 = calculate scaling factor based on a desired standard deviation]
 1.0                    SFx         - Turbulence scaling factor for the x direction (-)   [ScaleMethod=1]
