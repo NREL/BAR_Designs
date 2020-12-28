@@ -378,11 +378,11 @@ components:
                        -  [22.489499060627637, 0.0, 0.0, 0.0, 0.0, -2.346192647134671, 22.489499060627637, 0.0, 0.0, 0.0, -0.050155242985993144, 22.489499060627637, 2.346192647134671, 0.050155242985993144, 0.0, 1.3298331655203324, 1.3298331655203324, 0.0, 0.0, 0.0, 1.4187549948982974]
                        -  [13.17498413621269, 0.0, 0.0, 0.0, 0.0, -1.1209464862447185, 13.17498413621269, 0.0, 0.0, 0.0, -0.020601587604799965, 13.17498413621269, 1.1209464862447185, 0.020601587604799965, 0.0, 0.49792802862405405, 0.49792802862405405, 0.0, 0.0, 0.0, 0.5252932104803545]
                        -  [6.5999275777442055, 0.0, 0.0, 0.0, 0.0, -0.3757198887554643, 6.5999275777442055, 0.0, 0.0, 0.0, -0.003934148675896397, 6.5999275777442055, 0.3757198887554643, 0.003934148675896397, 0.0, 0.12233993219312726, 0.12233993219312726, 0.0, 0.0, 0.0, 0.12911794353938374]
-    hub: {cone_angle: 0.10471975511965977, diameter: 6.0, drag_coefficient: 0.5, hub_material: steel, spinner_material: glass_biax, flange_t2shell_t: 4.0, flange_OD2hub_D: 0.5, flange_ID2OD: 0.8, hub_blade_spacing_margin: 1.2, hub_stress_concentration: 2.5, n_front_brackets: 3, n_rear_brackets: 3, clearance_hub_spinner: 0.75, spin_hole_incr: 1.2, pitch_system_scaling_factor: 0.54, spinner_gust_ws: 70.0}
+    hub: {cone_angle: 0.06981317007977318, diameter: 6.0, drag_coefficient: 0.5, hub_material: steel, spinner_material: glass_biax, flange_t2shell_t: 4.0, flange_OD2hub_D: 0.5, flange_ID2OD: 0.8, hub_blade_spacing_margin: 1.2, hub_stress_concentration: 2.5, n_front_brackets: 3, n_rear_brackets: 3, clearance_hub_spinner: 0.75, spin_hole_incr: 1.2, pitch_system_scaling_factor: 0.54, spinner_gust_ws: 70.0}
     nacelle:
         drivetrain:
             diameter: 3.0
-            uptilt_angle: 0.17453292519943295
+            uptilt_angle: 0.13955555555555557
             distance_tt_hub: 3.0
             distance_hub2mb: 1.912
             distance_mb2mb: 0.368
@@ -406,7 +406,7 @@ components:
             lss_material: steel
             hss_material: steel
             bedplate_material: steel
-            uptilt: 0.17453292519943295
+            uptilt: 0.13955555555555557
             distance_hub_mb: 2.0
             distance_mb_mb: 1.0
             generator_mass_user: 0.0
@@ -461,9 +461,9 @@ components:
                       values: [0.06515525, 0.05866464, 0.05197538, 0.04607753, 0.04094533, 0.03582223, 0.03074005, 0.02575014, 0.02129438, 0.01803766, 0.01803766]
     RNA:
         elastic_properties_mb:
-            mass: 373653.2571068078
-            inertia: [155415926.48857734, 93137816.83303574, 67366407.00673197, 58.6457974334553, 3497309.873750875, -104377.74535166664]
-            center_mass: [-4.36954594194421, 0.18088742074975628, 0.8419511185053844]
+            mass: 377240.5339774923
+            inertia: [153518167.56409392, 93177474.89221369, 72962589.01813875, 49.662449486867445, 2836512.894064179, -104359.52938942504]
+            center_mass: [-4.355755681169066, 0.1791673159301292, 0.7053313568088186]
 airfoils:
    -  name: circular
       coordinates:
@@ -697,7 +697,6 @@ control:
     torque: {control_type: tsr_tracking, tsr: 10.5, VS_zeta: 0.5, VS_omega: 0.1, max_torque_rate: 4500000.0, VS_minspd: 0.0, VS_maxspd: 2.0}
     setpoint_smooth: {ss_vsgain: 1, ss_pcgain: 0.001}
     shutdown: {limit_type: gen_speed, limit_value: 2.0}
-    tsr: 10.5
 environment: {air_density: 1.225, air_dyn_viscosity: 1.81e-05, weib_shape_parameter: 2.0, air_speed_sound: 340.0, shear_exp: 0.2, water_density: 1025.0, water_dyn_viscosity: 0.0013351, soil_shear_modulus: 140000000.0, soil_poisson: 0.4, gravity: 9.80665, air_pressure: 103500.0, air_vapor_pressure: 1700.0, water_depth: 0.0}
 bos: {plant_turbine_spacing: 7, plant_row_spacing: 7, commissioning_pct: 0.01, decommissioning_pct: 0.15, distance_to_substation: 50.0, distance_to_interconnection: 8.0, interconnect_voltage: 130, distance_to_landfall: 100, distance_to_site: 100, port_cost_per_month: 2000000.0, site_auction_price: 0.0, site_assessment_plan_cost: 0.0, site_assessment_cost: 0.0, construction_operations_plan_cost: 0.0, boem_review_cost: 0.0, design_install_plan_cost: 0.0}
 costs: {wake_loss_factor: 0.15, fixed_charge_rate: 0.075, bos_per_kW: 2979.0, opex_per_kW: 44.0, turbine_number: 120, labor_rate: 58.8, painting_rate: 30.0, blade_mass_cost_coeff: 14.6, hub_mass_cost_coeff: 3.9, pitch_system_mass_cost_coeff: 22.1, spinner_mass_cost_coeff: 11.1, lss_mass_cost_coeff: 11.9, bearing_mass_cost_coeff: 4.5, gearbox_mass_cost_coeff: 12.9, hss_mass_cost_coeff: 6.8, generator_mass_cost_coeff: 12.4, bedplate_mass_cost_coeff: 2.9, yaw_mass_cost_coeff: 8.3, converter_mass_cost_coeff: 18.8, transformer_mass_cost_coeff: 18.8, hvac_mass_cost_coeff: 124.0, cover_mass_cost_coeff: 5.7, elec_connec_machine_rating_cost_coeff: 41.85, platforms_mass_cost_coeff: 17.1, tower_mass_cost_coeff: 2.9, controls_machine_rating_cost_coeff: 21.15, crane_cost: 12000.0}
