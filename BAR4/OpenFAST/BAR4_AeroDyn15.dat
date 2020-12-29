@@ -109,5 +109,8 @@ False                  SumPrint    - Generate a summary file listing input optio
 "RtSkew"
 "RtSpeed"
 "RtTSR"
+"RtVAvgxh"
+"RtVAvgyh"
+"RtVAvgzh"
 END of input file (the word "END" must appear in the first 3 columns of this last OutList line)
 ---------------------------------------------------------------------------------------
