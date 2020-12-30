@@ -382,7 +382,7 @@ components:
     nacelle:
         drivetrain:
             diameter: 3.0
-            uptilt_angle: 0.13955555555555557
+            uptilt: 0.13955555555555557
             distance_tt_hub: 3.0
             distance_hub2mb: 1.912
             distance_mb2mb: 0.368
@@ -406,7 +406,6 @@ components:
             lss_material: steel
             hss_material: steel
             bedplate_material: steel
-            uptilt: 0.13955555555555557
             distance_hub_mb: 2.0
             distance_mb_mb: 1.0
             generator_mass_user: 0.0
