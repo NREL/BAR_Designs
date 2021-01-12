@@ -322,6 +322,10 @@ components:
                   fiber_orientation:
                       grid: [0.0, 0.034482758620689655, 0.06896551724137931, 0.10344827586206896, 0.13793103448275862, 0.1724137931034483, 0.20689655172413793, 0.24137931034482757, 0.27586206896551724, 0.3103448275862069, 0.3448275862068966, 0.3793103448275862, 0.41379310344827586, 0.4482758620689655, 0.48275862068965514, 0.5172413793103449, 0.5517241379310345, 0.5862068965517241, 0.6206896551724138, 0.6551724137931034, 0.6896551724137931, 0.7241379310344828, 0.7586206896551724, 0.7931034482758621, 0.8275862068965517, 0.8620689655172413, 0.896551724137931, 0.9310344827586207, 0.9655172413793103, 1.0]
                       values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+            joint:
+                position: 0.7
+                mass: 2000.
+                cost: 50000.
         elastic_properties_mb:
             six_x_six:
                 reference_axis: *id001
@@ -416,7 +420,7 @@ components:
             distance_tt_hub: 3.0
             distance_hub2mb: 1.912
             distance_mb2mb: 0.368
-            overhang: 7.
+            overhang: 7.0
             lss_diameter: [0.577, 0.577]
             lss_wall_thickness: [0.288, 0.288]
             generator_length: 2.0
@@ -432,58 +436,26 @@ components:
             gearbox_efficiency: 0.95
             mb1Type: CARB
             mb2Type: SRB
-            uptower: True
+            uptower: true
             lss_material: steel
             hss_material: steel
             bedplate_material: steel
-        generator:
-            generator_type: DFIG
-            rho_Fe: 7700.0
-            rho_Fes: 7850.0
-            rho_Copper: 8900.0
-            rho_PM: 7450.0
-            B_r: 1.2
-            P_Fe0e: 1.0
-            P_Fe0h: 4.0
-            S_N: -0.002
-            alpha_p: 1.0995574287564276 #0.5*np.pi*0.7
-            b_r_tau_r: 0.45
-            b_ro: 0.004
-            b_s_tau_s: 0.45
-            b_so: 0.004
-            freq: 60
-            h_i: 0.001
-            h_sy0: 0.0
-            h_w: 0.005
-            k_fes: 0.9
-            k_s: 0.2
-            m: 3
-            mu_0: 1.2566370614359173e-06 #np.pi*4e-7
-            mu_r: 1.06
-            p: 3.0
-            phi: 1.5707963267948966 # 90 deg
-            ratio_mw2pp: 0.7
-            resist_Cu: 2.52e-8 #1.8e-8*1.4
-            y_tau_pr: 0.8333333 #10. / 12
-            rated_rpm: 1200.0
-            cofi: 0.9
-            y_tau_p: 0.8 #12./15.
-            sigma: 21.5e3
-            rad_ag: 0.61
-            len_s: 0.49
-            h_s: 0.08
-            I_0: 40.0
-            B_symax: 1.3
-            S_Nmax: -0.2
-            h_0: 0.01
-            k_fillr: 0.55
-            k_fills: 0.65
-            q1: 5
-            q2: 4
-            C_Cu: 4.786
-            C_Fe: 0.556
-            C_Fes: 0.50139
-            C_PM: 50.0
+            distance_hub_mb: 2.0
+            distance_mb_mb: 1.0
+            generator_mass_user: 0.0
+            generator_rpm_efficiency_user:
+                grid: [0.0, 1.0]
+                values: [0.95, 0.95]
+            nose_diameter: [0.3, 0.3]
+            nose_wall_thickness: [0.1, 0.1]
+            bedplate_wall_thickness:
+                grid: [0.0, 1.0]
+                values: [0.05, 0.05]
+            brake_mass_user: 0.0
+            hvac_mass_coefficient: 0.08
+            converter_mass_user: 0.0
+            transformer_mass_user: 0.0
+            generator_radius_user: 0.0
     tower:
         outer_shape_bem:
             reference_axis:
