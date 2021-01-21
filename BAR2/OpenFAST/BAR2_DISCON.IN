@@ -1,5 +1,5 @@
 ! Controller parameter input file for the WISDEM tuning wind turbine
-!    - File written using ROSCO Controller tuning logic on 01/12/21
+!    - File written using ROSCO Controller tuning logic on 01/20/21
 
 !------- DEBUG ------------------------------------------------------------
 1                   ! LoggingLevel		- {0: write no debug files, 1: write standard output .dbg-file, 2: write standard output .dbg-file and complete avrSWAP-array .dbg2-file}
@@ -19,19 +19,19 @@
 0                   ! Flp_Mode          - Flap control mode {0: no flap control, 1: steady state flap angle, 2: Proportional flap control}
 
 !------- FILTERS ----------------------------------------------------------
-1.21144             ! F_LPFCornerFreq	- Corner frequency (-3dB point) in the low-pass filters, [rad/s]
+1.24878             ! F_LPFCornerFreq	- Corner frequency (-3dB point) in the low-pass filters, [rad/s]
 0.00000             ! F_LPFDamping		- Damping coefficient [used only when F_FilterType = 2]
 0.00000             ! F_NotchCornerFreq	- Natural frequency of the notch filter, [rad/s]
 0.00000   0.25000   ! F_NotchBetaNumDen	- Two notch damping values (numerator and denominator, resp) - determines the width and depth of the notch, [-]
 0.628320000000      ! F_SSCornerFreq    - Corner frequency (-3dB point) in the first order low pass filter for the setpoint smoother, [rad/s].
 0.00000   1.00000   ! F_FlCornerFreq    - Natural frequency and damping in the second order low pass filter of the tower-top fore-aft motion for floating feedback control [rad/s, -].
-0.98799   1.00000   ! F_FlpCornerFreq   - Corner frequency and damping in the second order low pass filter of the blade root bending moment for flap control [rad/s, -].
+1.03353   1.00000   ! F_FlpCornerFreq   - Corner frequency and damping in the second order low pass filter of the blade root bending moment for flap control [rad/s, -].
 
 !------- BLADE PITCH CONTROL ----------------------------------------------
 34                  ! PC_GS_n			- Amount of gain-scheduling table entries
 0.000000  0.000000  0.089370  0.112287  0.131799  0.149322  0.165754  0.180964  0.195566  0.209495  0.222884  0.235987  0.248464  0.260812  0.272765  0.284421  0.295997  0.307139  0.318145  0.329103  0.339638  0.350099  0.360539  0.370605  0.380574  0.390542  0.400260  0.409791  0.419332  0.428789  0.437884  0.447007  0.456153  0.465008                ! PC_GS_angles	    - Gain-schedule table: pitch angles
--0.025012  -0.020068  -0.016516  -0.013842  -0.011756  -0.010084  -0.008712  -0.007568  -0.006598  -0.005766  -0.005044  -0.004412  -0.003853  -0.003357  -0.002912  -0.002512  -0.002150  -0.001820  -0.001519  -0.001243  -0.000989  -0.000754  -0.000537  -0.000335  -0.000147  0.000028  0.000192  0.000346  0.000491  0.000627  0.000755  0.000877  0.000991  0.001100                ! PC_GS_KP		- Gain-schedule table: pitch controller kp gains
--0.002159  -0.001805  -0.001550  -0.001359  -0.001210  -0.001090  -0.000992  -0.000910  -0.000840  -0.000781  -0.000729  -0.000684  -0.000644  -0.000608  -0.000576  -0.000547  -0.000522  -0.000498  -0.000476  -0.000457  -0.000438  -0.000422  -0.000406  -0.000392  -0.000378  -0.000366  -0.000354  -0.000343  -0.000332  -0.000323  -0.000313  -0.000305  -0.000297  -0.000289                ! PC_GS_KI		- Gain-schedule table: pitch controller ki gains
+-0.025475  -0.020455  -0.016849  -0.014134  -0.012016  -0.010317  -0.008925  -0.007763  -0.006778  -0.005933  -0.005200  -0.004558  -0.003991  -0.003487  -0.003036  -0.002629  -0.002261  -0.001927  -0.001621  -0.001341  -0.001083  -0.000845  -0.000624  -0.000419  -0.000228  -0.000050  0.000116  0.000273  0.000419  0.000558  0.000688  0.000811  0.000928  0.001038                ! PC_GS_KP		- Gain-schedule table: pitch controller kp gains
+-0.002201  -0.001840  -0.001581  -0.001385  -0.001233  -0.001111  -0.001011  -0.000927  -0.000857  -0.000796  -0.000743  -0.000697  -0.000656  -0.000620  -0.000587  -0.000558  -0.000532  -0.000508  -0.000486  -0.000466  -0.000447  -0.000430  -0.000414  -0.000399  -0.000386  -0.000373  -0.000361  -0.000349  -0.000339  -0.000329  -0.000320  -0.000311  -0.000302  -0.000294                ! PC_GS_KI		- Gain-schedule table: pitch controller ki gains
 0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0                ! PC_GS_KD			- Gain-schedule table: pitch controller kd gains
 0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0                ! PC_GS_TF			- Gain-schedule table: pitch controller tf gains (derivative filter)
 1.570000000000      ! PC_MaxPit			- Maximum physical pitch limit, [rad].
@@ -60,8 +60,8 @@
 65912.12847000      ! VS_RtTq			- Rated torque, [Nm].
 79.85057000000      ! VS_RefSpd			- Rated generator speed [rad/s]
 1                   ! VS_n				- Number of generator PI torque controller gains
--825.516170000      ! VS_KP				- Proportional gain for generator PI torque controller [1/(rad/s) Nm]. (Only used in the transitional 2.5 region if VS_ControlMode =/ 2)
--159.157910000      ! VS_KI				- Integral gain for generator PI torque controller [1/rad Nm]. (Only used in the transitional 2.5 region if VS_ControlMode =/ 2)
+-856.537440000      ! VS_KP				- Proportional gain for generator PI torque controller [1/(rad/s) Nm]. (Only used in the transitional 2.5 region if VS_ControlMode =/ 2)
+-162.260030000      ! VS_KI				- Integral gain for generator PI torque controller [1/rad Nm]. (Only used in the transitional 2.5 region if VS_ControlMode =/ 2)
 10.50               ! VS_TSRopt			- Power-maximizing region 2 tip-speed-ratio [rad].
 
 !------- SETPOINT SMOOTHER ---------------------------------------------
@@ -74,13 +74,13 @@
 0.0 0.0 0.0 0.0     ! WE_CP - Parameters that define the parameterized CP(lambda) function
 0.0          		! WE_Gamma			- Adaption gain of the wind speed estimator algorithm [m/rad]
 96.8                ! WE_GearboxRatio	- Gearbox ratio [>=1],  [-]
-149011550.94617      ! WE_Jtot			- Total drivetrain inertia, including blades, hub and casted generator inertia to LSS, [kg m^2]
+151915916.90431      ! WE_Jtot			- Total drivetrain inertia, including blades, hub and casted generator inertia to LSS, [kg m^2]
 1.225               ! WE_RhoAir			- Air density, [kg m^-3]
 "BAR2_Cp_Ct_Cq.txt"      ! PerfFileName      - File containing rotor performance tables (Cp,Ct,Cq)
 20      20          ! PerfTableSize     - Size of rotor performance tables, first number refers to number of blade pitch angles, second number referse to number of tip-speed ratios
 43                  ! WE_FOPoles_N      - Number of first-order system poles used in EKF
 4.00 4.50 5.00 5.50 6.00 6.50 7.00 7.50 8.00 8.32 8.82 9.32 9.82 10.32 10.82 11.32 11.82 12.32 12.82 13.32 13.82 14.32 14.82 15.32 15.82 16.32 16.82 17.32 17.82 18.32 18.82 19.32 19.82 20.32 20.82 21.32 21.82 22.32 22.82 23.32 23.82 24.32 24.82               ! WE_FOPoles_v      - Wind speeds corresponding to first-order system poles [m/s]
--0.02406613 -0.02707439 -0.03008266 -0.03309093 -0.03609919 -0.03910746 -0.04211572 -0.04512399 -0.04813225 -0.04756895 -0.03540775 -0.04222055 -0.05192631 -0.06313058 -0.07527696 -0.08806827 -0.10170516 -0.11575046 -0.13061359 -0.14592277 -0.16165338 -0.17836250 -0.19521296 -0.21275336 -0.23098556 -0.24932125 -0.26850047 -0.28816000 -0.30804593 -0.32882320 -0.34968916 -0.37101641 -0.39335953 -0.41587172 -0.43829568 -0.46164566 -0.48573137 -0.51007505 -0.53462760 -0.55956948 -0.58497528 -0.61081314 -0.63662695               ! WE_FOPoles        - First order system poles
+-0.02360603 -0.02655678 -0.02950753 -0.03245828 -0.03540904 -0.03835979 -0.04131054 -0.04426130 -0.04721205 -0.04665952 -0.03473082 -0.04141336 -0.05093357 -0.06192364 -0.07383779 -0.08638456 -0.09976074 -0.11353751 -0.12811649 -0.14313298 -0.15856285 -0.17495252 -0.19148083 -0.20868589 -0.22656952 -0.24455467 -0.26336722 -0.28265089 -0.30215663 -0.32253668 -0.34300372 -0.36392322 -0.38583919 -0.40792098 -0.42991623 -0.45281980 -0.47644504 -0.50032331 -0.52440646 -0.54887150 -0.57379158 -0.59913546 -0.62445576               ! WE_FOPoles        - First order system poles
 
 !------- YAW CONTROL ------------------------------------------------------
 0.0                 ! Y_ErrThresh		- Yaw error threshold. Turbine begins to yaw when it passes this. [rad^2 s]
