@@ -9,9 +9,9 @@ default                DT          - Communication interval for controllers (s) 
 99999.0                TPitManS(1) - Time to start override pitch maneuver for blade 1 and end standard pitch control (s)
 99999.0                TPitManS(2) - Time to start override pitch maneuver for blade 2 and end standard pitch control (s)
 99999.0                TPitManS(3) - Time to start override pitch maneuver for blade 3 and end standard pitch control (s) [unused for 2 blades]
-1.0                    PitManRat(1) - Pitch rate at which override pitch maneuver heads toward final pitch angle for blade 1 (deg/s)
-1.0                    PitManRat(2) - Pitch rate at which override pitch maneuver heads toward final pitch angle for blade 2 (deg/s)
-1.0                    PitManRat(3) - Pitch rate at which override pitch maneuver heads toward final pitch angle for blade 3 (deg/s) [unused for 2 blades]
+1.9989860852342056     PitManRat(1) - Pitch rate at which override pitch maneuver heads toward final pitch angle for blade 1 (deg/s)
+1.9989860852342056     PitManRat(2) - Pitch rate at which override pitch maneuver heads toward final pitch angle for blade 2 (deg/s)
+1.9989860852342056     PitManRat(3) - Pitch rate at which override pitch maneuver heads toward final pitch angle for blade 3 (deg/s) [unused for 2 blades]
 90.0                   BlPitchF(1) - Blade 1 final pitch for pitch maneuvers (degrees)
 90.0                   BlPitchF(2) - Blade 2 final pitch for pitch maneuvers (degrees)
 90.0                   BlPitchF(3) - Blade 3 final pitch for pitch maneuvers (degrees) [unused for 2 blades]
@@ -44,17 +44,17 @@ True                   GenTiStp    - Method to stop the generator {T: timed usin
 99999.0                TEC_RLR     - Rotor leakage reactance (ohms) [used only when VSContrl=0 and GenModel=2]
 99999.0                TEC_MR      - Magnetizing reactance (ohms) [used only when VSContrl=0 and GenModel=2]
 ---------------------- HIGH-SPEED SHAFT BRAKE ----------------------------------
-1                      HSSBrMode   - HSS brake model {0: none, 1: simple, 3: user-defined from routine UserHSSBr, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
+0                      HSSBrMode   - HSS brake model {0: none, 1: simple, 3: user-defined from routine UserHSSBr, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
 99999.0                THSSBrDp    - Time to initiate deployment of the HSS brake (s)
 99999.0                HSSBrDT     - Time for HSS-brake to reach full deployment once initiated (sec) [used only when HSSBrMode=1]
 99999.0                HSSBrTqF    - Fully deployed HSS-brake torque (N-m)
 ---------------------- NACELLE-YAW CONTROL -------------------------------------
 0                      YCMode      - Yaw control mode {0: none, 3: user-defined from routine UserYawCont, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
-0.0                    TYCOn       - Time to enable active yaw control (s) [unused when YCMode=0]
+99999.0                TYCOn       - Time to enable active yaw control (s) [unused when YCMode=0]
 0.0                    YawNeut     - Neutral yaw position--yaw spring force is zero at this yaw (degrees)
-0.0                    YawSpr      - Nacelle-yaw spring constant (N-m/rad)
-0.0                    YawDamp     - Nacelle-yaw damping constant (N-m/(rad/s))
-0.0                    TYawManS    - Time to start override yaw maneuver and end standard yaw control (s)
+2437593834.3430605     YawSpr      - Nacelle-yaw spring constant (N-m/rad)
+1159479.784843959      YawDamp     - Nacelle-yaw damping constant (N-m/(rad/s))
+99999.0                TYawManS    - Time to start override yaw maneuver and end standard yaw control (s)
 0.25                   YawManRat   - Yaw maneuver rate (in absolute value) (deg/s)
 0.0                    NacYawF     - Final yaw angle for override yaw maneuvers (degrees)
 ---------------------- TUNED MASS DAMPER ---------------------------------------
