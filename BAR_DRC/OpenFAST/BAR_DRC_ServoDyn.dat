@@ -53,7 +53,7 @@ True                   GenTiStp    - Method to stop the generator {T: timed usin
 99999.0                TYCOn       - Time to enable active yaw control (s) [unused when YCMode=0]
 0.0                    YawNeut     - Neutral yaw position--yaw spring force is zero at this yaw (degrees)
 2437593834.3430605     YawSpr      - Nacelle-yaw spring constant (N-m/rad)
-1158532.8062604342     YawDamp     - Nacelle-yaw damping constant (N-m/(rad/s))
+1158315.4335290852     YawDamp     - Nacelle-yaw damping constant (N-m/(rad/s))
 99999.0                TYawManS    - Time to start override yaw maneuver and end standard yaw control (s)
 0.25                   YawManRat   - Yaw maneuver rate (in absolute value) (deg/s)
 0.0                    NacYawF     - Final yaw angle for override yaw maneuvers (degrees)
