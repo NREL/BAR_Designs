@@ -1,5 +1,5 @@
 --------- BEAMDYN with OpenFAST INPUT FILE -------------------------------------------
-BAR2 blade
+BAR_URC blade
 ---------------------- SIMULATION CONTROL --------------------------------------
 True          Echo            - Echo input data to "<RootName>.ech" (flag)
 True          QuasiStaticInit - Use quasistatic pre-conditioning with centripetal accelerations in initialization (flag) [dynamic solve only]
