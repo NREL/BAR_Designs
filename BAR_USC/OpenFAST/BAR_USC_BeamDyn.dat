@@ -73,7 +73,7 @@ True          RotStates       - Orient states in the rotating frame during linea
 	 -3.76140e+00 	 0.00000e+00 	 9.79555e+01 	 -4.36309e+00 
 	 -4.00000e+00 	 0.00000e+00 	 9.99963e+01 	 -4.67883e+00 
 ---------------------- MESH PARAMETER ------------------------------------------
-          5   order_elem     - Order of interpolation (basis) function (-)
+          7   order_elem     - Order of interpolation (basis) function (-)
 ---------------------- MATERIAL PARAMETER --------------------------------------
 "BAR_USC_BeamDyn_Blade.dat"    BldFile - Name of file containing properties for blade (quoted string)
 ---------------------- PITCH ACTUATOR PARAMETERS -------------------------------
