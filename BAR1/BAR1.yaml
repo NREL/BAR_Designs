@@ -813,31 +813,4 @@ bos:
     distance_to_substation: 50.0
     distance_to_interconnection: 8.
     interconnect_voltage: 130
-costs:
-    wake_loss_factor: 0.15
-    fixed_charge_rate: 0.075
-    bos_per_kW: 2979.
-    opex_per_kW: 44.
-    turbine_number: 120
-    labor_rate: 58.8
-    painting_rate: 30.0
-    blade_mass_cost_coeff: 14.6
-    hub_mass_cost_coeff: 3.9
-    pitch_system_mass_cost_coeff: 22.1
-    spinner_mass_cost_coeff: 11.1
-    lss_mass_cost_coeff: 11.9
-    bearing_mass_cost_coeff: 4.5
-    gearbox_mass_cost_coeff: 12.9
-    hss_mass_cost_coeff: 6.8
-    generator_mass_cost_coeff: 12.4
-    bedplate_mass_cost_coeff: 2.9
-    yaw_mass_cost_coeff: 8.3
-    converter_mass_cost_coeff: 18.8
-    transformer_mass_cost_coeff: 18.8
-    hvac_mass_cost_coeff: 124.0
-    cover_mass_cost_coeff: 5.7
-    elec_connec_machine_rating_cost_coeff: 41.85
-    platforms_mass_cost_coeff: 17.1
-    tower_mass_cost_coeff: 2.9
-    controls_machine_rating_cost_coeff: 21.15
-    crane_cost: 12.e+3
+costs: {wake_loss_factor: 0.15, fixed_charge_rate: 0.065, bos_per_kW: 446.0, opex_per_kW: 43.0,, turbine_number: 120, labor_rate: 58.8, painting_rate: 30.0, blade_mass_cost_coeff: 14.6, hub_mass_cost_coeff: 3.9, pitch_system_mass_cost_coeff: 22.1, spinner_mass_cost_coeff: 11.1, lss_mass_cost_coeff: 11.9, bearing_mass_cost_coeff: 4.5, gearbox_mass_cost_coeff: 12.9, hss_mass_cost_coeff: 6.8, generator_mass_cost_coeff: 12.4, bedplate_mass_cost_coeff: 2.9, yaw_mass_cost_coeff: 8.3, converter_mass_cost_coeff: 18.8, transformer_mass_cost_coeff: 18.8, hvac_mass_cost_coeff: 124.0, cover_mass_cost_coeff: 5.7, elec_connec_machine_rating_cost_coeff: 41.85, platforms_mass_cost_coeff: 17.1, tower_mass_cost_coeff: 2.9, controls_machine_rating_cost_coeff: 21.15, crane_cost: 12000.0}
