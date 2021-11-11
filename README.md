@@ -8,11 +8,13 @@ The designs are described in the following publications:
 * Land-based wind turbines with flexible rail transportable blades – Part II: 3D FEM design optimization of the rotor blades. Ernesto Camarena, Evan Anderson, Josh Paquette, Pietro Bortolotti, Roland Feil, and Nick Johnson. Wind Energ. Sci. Discuss., https://doi.org/10.5194/wes-2021-74, 2021
 
 ## Nomenclature
-* BAR-UAG (BAR0) - Upwind non-transportable baseline with GFRP spar caps
-* BAR-DRG (BAR1) - Downwind flexible rail-transportable with GFRP spar caps
 * BAR-DRC (BAR2) - Downwind flexible rail-transportable with industry-baseline CFRP spar caps
 * BAR-USC (BAR3) - Upwind segmented blades with CFRP spar caps
 * BAR-URC (BAR4) - Upwind flexible rail-transportable with industry-baseline CFRP spar caps, 100-m long blades 
+
+## Archived models
+* BAR-UAG (BAR0) - Upwind non-transportable baseline with GFRP spar caps
+* BAR-DRG (BAR1) - Downwind flexible rail-transportable with GFRP spar caps
 * BAR5 - Downwind flexible rail-transportable with heavy-tow CFRP spar caps
 
 ## Controller
