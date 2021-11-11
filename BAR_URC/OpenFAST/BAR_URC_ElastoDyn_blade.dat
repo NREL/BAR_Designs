@@ -50,11 +50,11 @@ Generated with AeroElasticSE FAST driver
 -10.92648453234873     BldFl1Sh(4) -            , coeff of x^4
 9.434433871522653      BldFl1Sh(5) -            , coeff of x^5
 -2.93489931772286      BldFl1Sh(6) -            , coeff of x^6
--0.2665269388818641    BldFl2Sh(2) - Flap mode 2, coeff of x^2
--0.18153511614818144   BldFl2Sh(3) -            , coeff of x^3
--1.8325584965198944    BldFl2Sh(4) -            , coeff of x^4
-3.12949123614008       BldFl2Sh(5) -            , coeff of x^5
-0.15112931540985977    BldFl2Sh(6) -            , coeff of x^6
+-0.2665269388818642    BldFl2Sh(2) - Flap mode 2, coeff of x^2
+-0.18153511614818146   BldFl2Sh(3) -            , coeff of x^3
+-1.8325584965198949    BldFl2Sh(4) -            , coeff of x^4
+3.1294912361400806     BldFl2Sh(5) -            , coeff of x^5
+0.1511293154098598     BldFl2Sh(6) -            , coeff of x^6
 -0.11641997851863076   BldEdgSh(2) - Edge mode 1, coeff of x^2
 5.419471824530093      BldEdgSh(3) -            , coeff of x^3
 -11.059593115802345    BldEdgSh(4) -            , coeff of x^4
