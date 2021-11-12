@@ -10,7 +10,7 @@ False                  Echo        - Echo input data to <RootName>.ech (flag)
 99999.0                DT_UJac     - Time between calls to get Jacobians (s)
 1000000.0              UJacSclFact - Scaling factor used in Jacobians (-)
 ---------------------- FEATURE SWITCHES AND FLAGS ------------------------------
-1                      CompElast   - Compute structural dynamics (switch) {1=ElastoDyn; 2=ElastoDyn + BeamDyn for blades}
+2                      CompElast   - Compute structural dynamics (switch) {1=ElastoDyn; 2=ElastoDyn + BeamDyn for blades}
 1                      CompInflow  - Compute inflow wind velocities (switch) {0=still air; 1=InflowWind; 2=external from OpenFOAM}
 2                      CompAero    - Compute aerodynamic loads (switch) {0=None; 1=AeroDyn v14; 2=AeroDyn v15}
 1                      CompServo   - Compute control and electrical-drive dynamics (switch) {0=None; 1=ServoDyn}
@@ -20,9 +20,9 @@ False                  Echo        - Echo input data to <RootName>.ech (flag)
 0                      CompIce     - Compute ice loads (switch) {0=None; 1=IceFloe; 2=IceDyn}
 ---------------------- INPUT FILES ---------------------------------------------
 "BAR_USC_ElastoDyn.dat" EDFile      - Name of file containing ElastoDyn input parameters (quoted string)
-"none"                 BDBldFile(1) - Name of file containing BeamDyn input parameters for blade 1 (quoted string)
-"none"                 BDBldFile(2) - Name of file containing BeamDyn input parameters for blade 2 (quoted string)
-"none"                 BDBldFile(3) - Name of file containing BeamDyn input parameters for blade 3 (quoted string)
+"BAR_USC_BeamDyn.dat"  BDBldFile(1) - Name of file containing BeamDyn input parameters for blade 1 (quoted string)
+"BAR_USC_BeamDyn.dat"  BDBldFile(2) - Name of file containing BeamDyn input parameters for blade 2 (quoted string)
+"BAR_USC_BeamDyn.dat"  BDBldFile(3) - Name of file containing BeamDyn input parameters for blade 3 (quoted string)
 "BAR_USC_InflowFile.dat" InflowFile  - Name of file containing inflow wind input parameters (quoted string)
 "BAR_USC_AeroDyn15.dat" AeroFile    - Name of file containing aerodynamic input parameters (quoted string)
 "BAR_USC_ServoDyn.dat" ServoFile   - Name of file containing control and electrical-drive input parameters (quoted string)
