@@ -16,10 +16,10 @@ AF04_BL.txt              BL_file     ! The file name including the boundary laye
 True                     InclUAdata  ! Is unsteady aerodynamics data included in this table? If TRUE, then include 30 UA coefficients below this line
 !........................................
 -0.017311                alpha0      ! 0-lift angle of attack, depends on airfoil.
-17.059103                alpha1      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA>alpha0. (deg)
--1.733775                alpha2      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA<alpha0. (deg)
+15.703064                alpha1      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA>alpha0. (deg)
+-1.573222                alpha2      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA<alpha0. (deg)
 1.000000                 eta_e       ! Recovery factor in the range [0.85 - 0.95] used only for UAMOD=1, it is set to 1 in the code when flookup=True. (-)
-6.422119                 C_nalpha    ! Slope of the 2D normal force coefficient curve. (1/rad)
+6.817469                 C_nalpha    ! Slope of the 2D normal force coefficient curve. (1/rad)
 Default                  T_f0        ! Initial value of the time constant associated with Df in the expression of Df and f. [default = 3]
 Default                  T_V0        ! Initial value of the time constant associated with the vortex lift decay process; it is used in the expression of Cvn. It depends on Re,M, and airfoil class. [default = 6]
 Default                  T_p         ! Boundary-layer,leading edge pressure gradient time constant in the expression of Dp. It should be tuned based on airfoil experimental data. [default = 1.7]
@@ -260,10 +260,10 @@ Default                  filtCutOff  ! Cut-off frequency (-3 dB corner frequency
 True                     InclUAdata  ! Is unsteady aerodynamics data included in this table? If TRUE, then include 30 UA coefficients below this line
 !........................................
 -0.018722                alpha0      ! 0-lift angle of attack, depends on airfoil.
-17.471865                alpha1      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA>alpha0. (deg)
--1.714901                alpha2      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA<alpha0. (deg)
+16.126976                alpha1      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA>alpha0. (deg)
+-1.555640                alpha2      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA<alpha0. (deg)
 1.000000                 eta_e       ! Recovery factor in the range [0.85 - 0.95] used only for UAMOD=1, it is set to 1 in the code when flookup=True. (-)
-6.449499                 C_nalpha    ! Slope of the 2D normal force coefficient curve. (1/rad)
+6.849697                 C_nalpha    ! Slope of the 2D normal force coefficient curve. (1/rad)
 Default                  T_f0        ! Initial value of the time constant associated with Df in the expression of Df and f. [default = 3]
 Default                  T_V0        ! Initial value of the time constant associated with the vortex lift decay process; it is used in the expression of Cvn. It depends on Re,M, and airfoil class. [default = 6]
 Default                  T_p         ! Boundary-layer,leading edge pressure gradient time constant in the expression of Dp. It should be tuned based on airfoil experimental data. [default = 1.7]
@@ -504,10 +504,10 @@ Default                  filtCutOff  ! Cut-off frequency (-3 dB corner frequency
 True                     InclUAdata  ! Is unsteady aerodynamics data included in this table? If TRUE, then include 30 UA coefficients below this line
 !........................................
 -0.019189                alpha0      ! 0-lift angle of attack, depends on airfoil.
-17.573365                alpha1      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA>alpha0. (deg)
--1.708810                alpha2      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA<alpha0. (deg)
+16.282128                alpha1      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA>alpha0. (deg)
+-1.549992                alpha2      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA<alpha0. (deg)
 1.000000                 eta_e       ! Recovery factor in the range [0.85 - 0.95] used only for UAMOD=1, it is set to 1 in the code when flookup=True. (-)
-6.461545                 C_nalpha    ! Slope of the 2D normal force coefficient curve. (1/rad)
+6.863619                 C_nalpha    ! Slope of the 2D normal force coefficient curve. (1/rad)
 Default                  T_f0        ! Initial value of the time constant associated with Df in the expression of Df and f. [default = 3]
 Default                  T_V0        ! Initial value of the time constant associated with the vortex lift decay process; it is used in the expression of Cvn. It depends on Re,M, and airfoil class. [default = 6]
 Default                  T_p         ! Boundary-layer,leading edge pressure gradient time constant in the expression of Dp. It should be tuned based on airfoil experimental data. [default = 1.7]
@@ -748,10 +748,10 @@ Default                  filtCutOff  ! Cut-off frequency (-3 dB corner frequency
 True                     InclUAdata  ! Is unsteady aerodynamics data included in this table? If TRUE, then include 30 UA coefficients below this line
 !........................................
 -0.048564                alpha0      ! 0-lift angle of attack, depends on airfoil.
-17.512935                alpha1      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA>alpha0. (deg)
--1.688726                alpha2      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA<alpha0. (deg)
+16.268910                alpha1      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA>alpha0. (deg)
+-1.529608                alpha2      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA<alpha0. (deg)
 1.000000                 eta_e       ! Recovery factor in the range [0.85 - 0.95] used only for UAMOD=1, it is set to 1 in the code when flookup=True. (-)
-6.466235                 C_nalpha    ! Slope of the 2D normal force coefficient curve. (1/rad)
+6.877524                 C_nalpha    ! Slope of the 2D normal force coefficient curve. (1/rad)
 Default                  T_f0        ! Initial value of the time constant associated with Df in the expression of Df and f. [default = 3]
 Default                  T_V0        ! Initial value of the time constant associated with the vortex lift decay process; it is used in the expression of Cvn. It depends on Re,M, and airfoil class. [default = 6]
 Default                  T_p         ! Boundary-layer,leading edge pressure gradient time constant in the expression of Dp. It should be tuned based on airfoil experimental data. [default = 1.7]
@@ -992,10 +992,10 @@ Default                  filtCutOff  ! Cut-off frequency (-3 dB corner frequency
 True                     InclUAdata  ! Is unsteady aerodynamics data included in this table? If TRUE, then include 30 UA coefficients below this line
 !........................................
 -0.076794                alpha0      ! 0-lift angle of attack, depends on airfoil.
-17.387896                alpha1      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA>alpha0. (deg)
--1.709486                alpha2      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA<alpha0. (deg)
+15.963888                alpha1      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA>alpha0. (deg)
+-1.551465                alpha2      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA<alpha0. (deg)
 1.000000                 eta_e       ! Recovery factor in the range [0.85 - 0.95] used only for UAMOD=1, it is set to 1 in the code when flookup=True. (-)
-6.468210                 C_nalpha    ! Slope of the 2D normal force coefficient curve. (1/rad)
+6.877637                 C_nalpha    ! Slope of the 2D normal force coefficient curve. (1/rad)
 Default                  T_f0        ! Initial value of the time constant associated with Df in the expression of Df and f. [default = 3]
 Default                  T_V0        ! Initial value of the time constant associated with the vortex lift decay process; it is used in the expression of Cvn. It depends on Re,M, and airfoil class. [default = 6]
 Default                  T_p         ! Boundary-layer,leading edge pressure gradient time constant in the expression of Dp. It should be tuned based on airfoil experimental data. [default = 1.7]
