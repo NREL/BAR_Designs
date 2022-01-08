@@ -1,7 +1,7 @@
 --------- BEAMDYN with OpenFAST INPUT FILE -------------------------------------------
 BAR_USC blade
 ---------------------- SIMULATION CONTROL --------------------------------------
-True          Echo            - Echo input data to "<RootName>.ech" (flag)
+False         Echo            - Echo input data to "<RootName>.ech" (flag)
 True          QuasiStaticInit - Use quasistatic pre-conditioning with centripetal accelerations in initialization (flag) [dynamic solve only]
  0            rhoinf          - Numerical damping parameter for generalized-alpha integrator
  2            quadrature      - Quadrature method: 1=Gaussian; 2=Trapezoidal (switch)
@@ -82,7 +82,7 @@ False         UsePitchAct - Whether a pitch actuator should be used (flag)
       2E+07   PitchK      - Pitch actuator stiffness (kg-m^2/s^2) [used only when UsePitchAct is true]
      500000   PitchC      - Pitch actuator damping (kg-m^2/s) [used only when UsePitchAct is true]
 ---------------------- OUTPUTS -------------------------------------------------
-True          SumPrint       - Print summary data to "<RootName>.sum" (flag)
+False         SumPrint       - Print summary data to "<RootName>.sum" (flag)
 "ES10.3E2"    OutFmt         - Format used for text tabular output, excluding the time channel.
           9   NNodeOuts      - Number of nodes to output to file [0 - 9] (-)
 3, 6, 9, 12, 15, 18, 21, 24, 27     OutNd          - Nodes whose values will be output  (-) OutNd       - Nodes whose values will be output  (-) OutNd       - Nodes whose values will be output  (-) OutNd       - Nodes whose values will be output  (-) OutNd       - Nodes whose values will be output  (-) OutNd       - Nodes whose values will be output  (-) OutNd       - Nodes whose values will be output  (-) OutNd       - Nodes whose values will be output  (-) OutNd       - Nodes whose values will be output  (-)
