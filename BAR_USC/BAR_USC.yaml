@@ -819,8 +819,8 @@ materials:
       area_density_dry: 6.230769230769231
       component_id: 4
    -  name: glass_biax
-      description: Vectorply E-LT-5500, Epikote MGS RIMR 135/Epicure MGS RIMH 1366 epoxy
-      source: Vectorply E-LT-5500, Hybrid Rule of Mixtures
+      description: (+-45)6 PPG-Devold DB810- E05—a fabric infused with Epikote MGS RIMR 135/Epicure RIMH 1366 epoxy resin
+      source: (+-45)6 PPG-Devold DB810- E05—a fabric infused with Epikote MGS RIMR 135/Epicure RIMH 1366 epoxy resin
       orth: 1.0
       rho: 1940.0
       E: [11023100000.0, 11023100000.0, 16047700000.0]
@@ -843,8 +843,8 @@ materials:
       component_id: 3
       roll_mass: 181.4368
    -  name: glass_triax
-      description: Vectorply E-LT-5500, Epikote MGS RIMR 135/Epicure MGS RIMH 1366 epoxy
-      source: Vectorply E-LT-5500, Hybrid Rule of Mixtures
+      description: ((±45)(0)2)s Saertex U14EU920-00940-T1300 and Saertex VU-90079-00830-01270—fabrics infused with Vantico TDT 177-155.
+      source: ((+-45)(0)2)s Saertex U14EU920-00940-T1300 and Saertex VU-90079-00830-01270—fabrics infused with Vantico TDT 177-155.
       orth: 1.0
       rho: 1940.0
       E: [28211400000.0, 16238800000.0, 15835500000.0]
