@@ -1,5 +1,5 @@
-# ----- Rotor performance tables for the WISDEM tuning wind turbine ----- 
-# ------------ Written on Nov-11-21 using the ROSCO toolbox ------------ 
+# ----- Rotor performance tables for the WEIS Turbine wind turbine ----- 
+# ------------ Written on Mar-23-22 using the ROSCO toolbox ------------ 
 
 # Pitch angle vector, 20 entries - x axis (matrix columns) (deg)
 -5.0   -3.158   -1.316   0.5263   2.368   4.211   6.053   7.895   9.737   11.58   13.42   15.26   17.11   18.95   20.79   22.63   24.47   26.32   28.16   30.0   
