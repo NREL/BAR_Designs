@@ -4,8 +4,6 @@ Generated with AeroElasticSE FAST driver
 False                  Echo        - Echo input data to "<RootName>.ech" (flag)
 3                      Method      - Integration method: {1: RK4, 2: AB4, or 3: ABM4} (-)
 default                DT          Integration time step (s)
----------------------- ENVIRONMENTAL CONDITION ---------------------------------
-9.81                   Gravity     - Gravitational acceleration (m/s^2)
 ---------------------- DEGREES OF FREEDOM --------------------------------------
 True                   FlapDOF1    - First flapwise blade mode DOF (flag)
 True                   FlapDOF2    - Second flapwise blade mode DOF (flag)
@@ -73,8 +71,8 @@ False                  PtfmYDOF    - Platform yaw rotation DOF (flag)
 0.0                    TipMass(1)  - Tip-brake mass, blade 1 (kg)
 0.0                    TipMass(2)  - Tip-brake mass, blade 2 (kg)
 0.0                    TipMass(3)  - Tip-brake mass, blade 3 (kg) [unused for 2 blades]
-30114.903369852178     HubMass     - Hub mass (kg)
-254865.89060606883     HubIner     - Hub inertia about rotor axis [3 blades] or teeter axis [2 blades] (kg m^2)
+29988.349590573474     HubMass     - Hub mass (kg)
+253902.52636497447     HubIner     - Hub inertia about rotor axis [3 blades] or teeter axis [2 blades] (kg m^2)
 11455.18042741934      GenIner     - Generator inertia about HSS (kg m^2)
 206742.68535818093     NacMass     - Nacelle mass (kg)
 2006639.9369095326     NacYIner    - Nacelle inertia about yaw axis (kg m^2)
@@ -101,7 +99,7 @@ False                  PtfmYDOF    - Platform yaw rotation DOF (flag)
 95.0                   GBoxEff     - Gearbox efficiency (%)
 96.76                  GBRatio     - Gearbox ratio (-)
 278133415.1398381      DTTorSpr    - Drivetrain torsional spring (N-m/rad)
-1989144.5703802        DTTorDmp    - Drivetrain torsional damper (N-m/(rad/s))
+1979073.5248903504     DTTorDmp    - Drivetrain torsional damper (N-m/(rad/s))
 ---------------------- FURLING -------------------------------------------------
 False                  Furling     - Read in additional model properties for furling turbine (flag) [must currently be FALSE)
 "none"                 FurlFile    - Name of file containing furling properties (quoted string) [unused when Furling=False]
