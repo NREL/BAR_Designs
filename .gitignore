@@ -1,0 +1,10 @@
+/BAR_USC/WEIS/output_of
+/BAR_USC/WEIS/reports
+*.log
+*.outb
+*.zip
+*.ech
+*.sum
+*.dbg
+*.pdf
+*.bts
