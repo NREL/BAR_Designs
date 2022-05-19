@@ -1,6 +1,6 @@
 #! /bin/bash
 #SBATCH --job-name=SegBlade                     # Job name
-#SBATCH --time 12:00:00
+#SBATCH --time 2-00:00:00
 #SBATCH -A bar
 #SBATCH -p standard
 #SBATCH --nodes=1                               # Number of nodes
@@ -13,5 +13,4 @@ module purge
 ml conda comp-intel intel-mpi mkl
 module unload gcc
 
-/scratch/banderso2/BAR_Designs/BAR_USC/WEIS/weis_driver.py &
-wait
+mpirun -np 200 python weis_driver.py
