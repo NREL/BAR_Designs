@@ -13,4 +13,5 @@ module purge
 ml conda comp-intel intel-mpi mkl
 module unload gcc
 
+source activate weis-env
 mpirun -np 193 python weis_driver.py
