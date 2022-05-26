@@ -6,7 +6,7 @@ General:
         save_timeseries: True
         save_iterations: True
         use_exe: True
-        # model_only: True
+        model_only: True
 
 WISDEM:
     RotorSE:
@@ -24,7 +24,7 @@ Level3: # Options for WEIS fidelity level 3 = nonlinear time domain
     flag: True
     from_openfast: True
     openfast_file: BAR_USC.fst
-    openfast_dir: /Users/banderso2/Documents/BAR/BAR_Designs/BAR_USC/OpenFAST
+    openfast_dir: /scratch/banderso2/BAR_Designs/BAR_USC/OpenFAST
     simulation:
         DT: 0.0002
         CompElast: 2
@@ -59,7 +59,7 @@ Level3: # Options for WEIS fidelity level 3 = nonlinear time domain
     
 ROSCO:
     flag: True
-    tuning_yaml: /Users/banderso2/Documents/BAR/BAR_Designs/BAR_USC/WEIS/ROSCO_BAR_USC.yaml
+    tuning_yaml: /scratch/banderso2/BAR_Designs/BAR_USC/WEIS/ROSCO_BAR_USC.yaml
 
 DLC_driver:
     DLCs:

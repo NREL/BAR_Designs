@@ -2,7 +2,7 @@
 #SBATCH --job-name=SegBlade                     # Job name
 #SBATCH --time 2-00:00:00
 #SBATCH -A bar
-#SBATCH -p standard
+#SBATCH -p debug
 #SBATCH --nodes=6                               # Number of nodes
 #SBATCH --ntasks-per-node=36                    # Number of processors per node
 #SBATCH --mail-user benjamin.anderson@nrel.gov
