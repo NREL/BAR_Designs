@@ -74,6 +74,7 @@ DLC_driver:
           analysis_time: 720.
           transient_time: 120.
         - DLC: "1.4"
+          ws: [6, 8, 10]
           analysis_time: 720.
           transient_time: 120.
         - DLC: "6.1"
