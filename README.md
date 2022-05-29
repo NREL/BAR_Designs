@@ -19,4 +19,4 @@ The designs are described in the following publications:
 
 ## Controller
 The controller for the BAR models is ROSCO. Please follow the instructions here 
-https://github.com/NREL/ROSCO_toolbox
+https://github.com/NREL/ROSCO
