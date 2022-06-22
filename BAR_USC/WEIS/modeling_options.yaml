@@ -6,11 +6,7 @@ General:
         save_timeseries: True
         save_iterations: True
         use_exe: True
-<<<<<<< HEAD
-        #  model_only: True
-=======
         model_only: False
->>>>>>> a49533a040e381c98b86e775f3b019c075b3e635
 
 WISDEM:
     RotorSE:
