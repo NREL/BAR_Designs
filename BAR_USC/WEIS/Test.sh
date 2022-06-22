@@ -1,10 +1,10 @@
 #! /bin/bash
 #SBATCH --job-name=SegBlade                     # Job name
-#SBATCH --time 2-00:00:00
+#SBATCH --time 01:00:00
 #SBATCH -A bar
-#SBATCH -p standard
-#SBATCH --nodes=44                           # Number of nodes
-#SBATCH --ntasks-per-node=4                    # Number of processors per node
+####SBATCH -p debug
+#SBATCH --nodes=5                           # Number of nodes
+#SBATCH --ntasks-per-node=36                    # Number of processors per node
 #SBATCH --mail-user benjamin.anderson@nrel.gov
 #SBATCH --mail-type BEGIN,END,FAIL
 #SBATCH -o slurm-%x-%j.log                      # Output

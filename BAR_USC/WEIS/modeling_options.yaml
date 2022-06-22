@@ -6,7 +6,11 @@ General:
         save_timeseries: True
         save_iterations: True
         use_exe: True
+<<<<<<< HEAD
         #  model_only: True
+=======
+        model_only: False
+>>>>>>> a49533a040e381c98b86e775f3b019c075b3e635
 
 WISDEM:
     RotorSE:
@@ -66,24 +70,24 @@ DLC_driver:
         - DLC: "1.1"
           ws_bin_size: 2
           n_seeds: 6
-          analysis_time: 720.
+          analysis_time: 600.
           transient_time: 120.
         - DLC: "1.3"
           ws_bin_size: 2
           n_seeds: 6
-          analysis_time: 720.
+          analysis_time: 600.
           transient_time: 120.
         - DLC: "1.4"
           wind_speed: [6, 8, 10]
-          analysis_time: 720.
+          analysis_time: 600.
           transient_time: 120.
         - DLC: "6.1"
           ws_bin_size: 2
           n_seeds: 6
-          analysis_time: 720.
+          analysis_time: 600.
           transient_time: 120.
         - DLC: "6.3"
           ws_bin_size: 2
           n_seeds: 6
-          analysis_time: 720.
+          analysis_time: 600.
           transient_time: 120.
