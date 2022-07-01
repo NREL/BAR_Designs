@@ -5,8 +5,8 @@ General:
         OF_run_dir: output_of
         save_timeseries: True
         save_iterations: True
-        use_exe: True
-        model_only: False
+        use_exe: True  # try setting to false, using 1core/sim (5 nodes)
+        model_only: True
 
 WISDEM:
     RotorSE:
@@ -24,7 +24,7 @@ Level3: # Options for WEIS fidelity level 3 = nonlinear time domain
     flag: True
     from_openfast: True
     openfast_file: BAR_USC.fst
-    openfast_dir: /scratch/banderso2/BAR_Designs/BAR_USC/OpenFAST
+    openfast_dir: /Users/banderso2/Documents/BAR/BAR_Designs/BAR_USC/OpenFAST #/scratch/banderso2/BAR_Designs/BAR_USC/OpenFAST
     simulation:
         DT: 0.0002
         CompElast: 2
@@ -56,10 +56,14 @@ Level3: # Options for WEIS fidelity level 3 = nonlinear time domain
         PtfmRDOF : False
         PtfmPDOF : False
         PtfmYDOF : False
+    outlist:
+        # AeroDyn: {}
+        ElastoDyn: {}
+
     
 ROSCO:
     flag: True
-    tuning_yaml: /scratch/banderso2/BAR_Designs/BAR_USC/WEIS/ROSCO_BAR_USC.yaml
+    tuning_yaml: /Users/banderso2/Documents/BAR/BAR_Designs/BAR_USC/WEIS/ROSCO_BAR_USC.yaml # /scratch/banderso2/BAR_Designs/BAR_USC/WEIS/ROSCO_BAR_USC.yaml
 
 DLC_driver:
     DLCs:

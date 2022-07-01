@@ -113,9 +113,9 @@ True                   TabDelim    - Use tab delimiters in text tabular output f
 "ES10.3E2"             OutFmt      - Format used for text tabular output (except time).  Resulting field should be 10 characters. (quoted string) (currently unused)
 0.0                    TStart      - Time to begin tabular output (s) (currently unused)
 1                      DecFact     - Decimation factor for tabular output {1: output every time step} (-) (currently unused)
-9                      NTwGages    - Number of tower nodes that have strain gages for output [0 to 9] (-)
+0                      NTwGages    - Number of tower nodes that have strain gages for output [0 to 9] (-)
 2, 4, 6, 8, 10, 12, 14, 16, 18 TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0]
-9                      NBlGages    - Number of blade nodes that have strain gages for output [0 to 9] (-)
+0                      NBlGages    - Number of blade nodes that have strain gages for output [0 to 9] (-)
 6, 11, 16, 21, 26, 31, 36, 41, 46 BldGagNd    - List of blade nodes that have strain gages [1 to BldNodes] (-) [unused if NBlGages=0]
                    OutList             - The next line(s) contains a list of output parameters.  See OutListParameters.xlsx for a listing of available output channels, (-)
 END of input file (the word "END" must appear in the first 3 columns of this last OutList line)
